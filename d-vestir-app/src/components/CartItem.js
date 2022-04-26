@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 
 import { connect } from 'react-redux';
 import { removeFromCart, adjustQty } from '../actions/shoppingActions';
-import { Items, Detail } from '../components/styles/CartItem.Styled'
+import { Items, Detail, Cantidad } from '../components/styles/CartItem.Styled'
 
 import { TiDelete } from 'react-icons/ti'
+import { Price, Title } from './styles/Product.Styled';
 
 const CartItem = ({ itemData, removeFromCart, adjustQty }) => {
 
@@ -17,37 +18,38 @@ const CartItem = ({ itemData, removeFromCart, adjustQty }) => {
     }
 
     return (
-        <Items>
-            <img
-                src={itemData.image}
-                alt={itemData.title}
+        <>
+            <Items>
+                <img
+                    src={itemData.image}
+                    alt={itemData.title}
+                />
+                <Detail>
+                    <Title>{itemData.title}</Title>
+                    {/* <p>{itemData.description}</p> */}
+                    <Price>${itemData.price} </Price>
+                    <Cantidad>
+                        <div>
+                            {/* <label htmlFor="qty">Unidades</label> */}
+                            <input
+                                min="1"
+                                type="number"
+                                id="qty"
+                                name="qty"
+                                value={input}
+                                onChange={onChangeHandler}
+                            />
+                            <button
+                                onClick={() => removeFromCart(itemData.id)}>
+                                {/* Eliminar */}
+                                <TiDelete size={'2em'} />
+                            </button>
+                        </div>
+                    </Cantidad>
+                </Detail>
+            </Items>
 
-            />
-            <Detail>
-                <p>{itemData.title}</p>
-                <p >{itemData.description}</p>
-                <p >${itemData.price} </p>
-            </Detail>
-            <div >
-                <div >
-                    <label htmlFor="qty">Unidades</label>
-                    <input
-                        min="1"
-                        type="number"
-                        id="qty"
-                        name="qty"
-                        value={input}
-                        onChange={onChangeHandler}
-                    />
-                </div>
-                <button
-                    onClick={() => removeFromCart(itemData.id)}
-                >
-                    {/* Eliminar */}
-                    <TiDelete size={'2em'}/>
-                </button>
-            </div>
-        </Items>
+        </>
     );
 };
 

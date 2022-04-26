@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import ProductCard from './ProductCard';
+// import ProductCard from './ProductCard';
 import Products from './Products';
 
 const ProductList = () => {
@@ -9,8 +9,8 @@ const ProductList = () => {
   console.log(products);
 
   return (
-    <div>ProductList
-      <ProductCard/>
+    <div>
+      {/* <ProductCard/> */}
       <Products/>
     </div>
   )

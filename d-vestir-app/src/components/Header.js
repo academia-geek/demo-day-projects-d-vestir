@@ -4,7 +4,7 @@ import Cart from '../components/Cart';
 
 const Header = () => {
   return (
-    <div>Header
+    <div>
 
         <Navbar/>
         <Cart/>

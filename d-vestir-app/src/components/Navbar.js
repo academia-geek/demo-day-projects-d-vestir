@@ -19,18 +19,20 @@ const Navbar = ({ cart }) => {
     }, [cart, cartCount])
 
     return (
-        <Nav>
-            <Link to='/products'>
-                <h2>Carrito de compras</h2>
-            </Link>
-            <Link to='/cart'>
-                <DivCart>
-                    {/* <h3>Cart</h3> */}
-                    <FiShoppingCart size={'2em'} />
-                    <Counter>{cartCount}</Counter>
-                </DivCart>
-            </Link>
-        </Nav>
+        <>
+            <Nav>
+                <Link to='/products' style={{ textDecoration: 'none' }}>
+                    <h2>Carrito de compras</h2>
+                </Link>
+                <Link to='/cart' style={{ textDecoration: 'none' }}>
+                    <DivCart>
+                        {/* <h3>Cart</h3> */}
+                        <FiShoppingCart size={'2em'} />
+                        <Counter>{cartCount}</Counter>
+                    </DivCart>
+                </Link>
+            </Nav>
+        </>
     )
 }
 

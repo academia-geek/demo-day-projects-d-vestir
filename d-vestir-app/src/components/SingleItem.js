@@ -2,12 +2,24 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { addToCart } from '../actions/shoppingActions';
 import { DivDetail, Title, Description, Price, Button, Card } from './styles/SingleItem.Styled';
-
+import ReactImageMagnify from 'react-image-magnify';
 
 const SingleItem = ({ currentItem, addToCart }) => {
     return (
         <DivDetail>
-            <img src={currentItem.image} alt='' />
+            {/* <img src={currentItem.image} alt='' /> */}
+            <ReactImageMagnify {...{
+              smallImage: {
+                alt: `${currentItem.title}`,
+                isFluidWidth: true,
+                src: `${currentItem.image}`,
+              },
+              largeImage: {
+                src: `${currentItem.image}`,
+                width: 1200,
+                height: 1800
+              }
+            }} />
             <Card>
                 <Title>{currentItem.title}</Title>
                 <Description>{currentItem.description}</Description>

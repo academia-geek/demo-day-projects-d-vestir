@@ -28,10 +28,11 @@ useEffect(() => {
                 ))}
             </Item>
             <Content>
-                <h4>Orden de compra</h4>
+                <h3>Orden de compra</h3>
                 <Price>
-                    <span>Cantidad Unidades ({totalItems})</span><br></br>
-                    <span>Total a pagar ${totalPrice}</span>
+                    <p>Cantidad Unidades ({totalItems})</p>
+                    <p>Total a pagar</p>
+                    <Price> ${totalPrice}</Price>
                 </Price>
                 <Button>
                     Comprar

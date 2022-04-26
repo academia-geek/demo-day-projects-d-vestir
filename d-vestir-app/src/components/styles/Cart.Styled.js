@@ -21,18 +21,23 @@ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 border-radius: 10px;
 `
 export const Price = styled.div`
-flex: 0.4;
+  // flex: 0.4;
   font-size: 1.2rem;
   font-weight: bold;
 
+  p {
+    color:grey;
+  }
+  
+
 `
 export const Button = styled.button`
-padding: 10px 17px;
-  border: 1px solid var(--secondary-color);
+  padding: 10px 17px;
   border-radius: 10px;
-  background: var(--primary-color);
-  color: var(--light-color);
+  background: ${({theme}) => theme.success.background};
+  color: ${({theme}) => theme.success.color};
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
 `
+

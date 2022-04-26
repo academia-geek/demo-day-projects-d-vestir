@@ -4,32 +4,152 @@ import * as actionTypes from '../types/types';
 const initialState = {
   products: [{
     id: 1,
-    title: "This is the COOLEST Cube Ever",
+    title: "Laboriosam molestiae nostrum in.",
     description:
-      "This cube will keep you busy the entire day and it is very fun to play with",
-    price: 15.0,
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 1500.0,
     image:
-      "https://images.unsplash.com/photo-1591991731833-b4807cf7ef94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924803/Shopping_cart/mediamodifier-7cERndkOyDw-unsplash_q1rsga.jpg",
   },
   {
     id: 2,
-    title: "Large Coffee Cup",
+    title: "Laboriosam molestiae nostrum in.",
     description:
-      "Get a big cup of coffee every morning before the day starts",
-    price: 20.0,
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 2000.0,
     image:
-      "https://images.unsplash.com/photo-1572119865084-43c285814d63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924781/Shopping_cart/alina-levkovich-vao35_bkgFc-unsplash_fnfkpg.jpg",
   },
   {
     id: 3,
-    title: "Books That CHANGED My Life",
+    title: "Laboriosam molestiae nostrum in.",
     description:
-      "These books will keep you busy all throughout the entire lockdown and give you some great advise from famous people",
-    price: 150.0,
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
     image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80",
-  },], //id, title, des, price, img
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924780/Shopping_cart/marlon-alves-fTw4sPi6YKc-unsplash_ne2l9a.jpg",
+  },
+  {
+    id: 4,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924780/Shopping_cart/brian-lawson-Z9tGkCotYHs-unsplash_rz9emu.jpg",
+  },
+  {
+    id: 5,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924779/Shopping_cart/heather-ford-5gkYsrH_ebY-unsplash_sanzva.jpg",
+  },
+  {
+    id: 6,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924780/Shopping_cart/bernadett-grega-y69xP87X26U-unsplash_ai76ma.jpg",
+  },
+  {
+    id: 7,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924777/Shopping_cart/bao-bao-TysFvOl78u0-unsplash_fmuaho.jpg",
+  },
+  {
+    id: 8,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924777/Shopping_cart/jeremy-alford-mx1OV1nlFI0-unsplash_x75gkz.jpg",
+  },
+  {
+    id: 9,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924777/Shopping_cart/laura-chouette-q7dkbaeyjUE-unsplash_dvepti.jpg",
+  },
+  {
+    id: 10,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924776/Shopping_cart/lizzy-jenkins-Ski5jkhduAY-unsplash_lvvub8.jpg",
+  },
+  {
+    id: 11,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924771/Shopping_cart/caio-coelho-QRN47la37gw-unsplash_mfincb.jpg",
+  },
+  {
+    id: 12,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924774/Shopping_cart/sarah-dorweiler-gUPiTDBdRe4-unsplash_gqtmhc.jpg",
+  },
+  {
+    id: 13,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924774/Shopping_cart/creaslim-SrqCf0SBaS8-unsplash_v3cr7w.jpg",
+  },
+  {
+    id: 14,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924773/Shopping_cart/md-salman-tWOz2_EK5EQ-unsplash_mgorpb.jpg",
+  },
+  {
+    id: 15,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924773/Shopping_cart/ns-37rVmK3jY-c-unsplash_dwl0pm.jpg",
+  },
+  {
+    id: 16,
+    title: "Laboriosam molestiae nostrum in.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
+    price: 15000.0,
+    image:
+      "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924773/Shopping_cart/maude-frederique-lavoie-EDSTj4kCUcw-unsplash_blmzaw.jpg",
+  },
+], //id, title, des, price, img
+
   cart: [], //id, title, des, price, img, cuantity
+  
   currentItem: null,
 }
 

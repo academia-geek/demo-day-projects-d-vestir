@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 export const Div = styled.div`
-    display: flex;
-    width: 100%;
-    margin-top: 2rem;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // width: 100%;
+    margin: 2rem 2rem;
     align-items: center;
+    justify-content:center;
+    place-items:center;
+    padding: 2rem 2rem;
    
 `

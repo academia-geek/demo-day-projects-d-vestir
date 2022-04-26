@@ -30,7 +30,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${({theme}) => theme.colors.orange};
         color:white;
         border:none;
-
+        cursor:pointer;
     }
 
     h3, h4 {
@@ -60,5 +60,10 @@ export const theme = {
     error: {
         color:'#77204b',
         background:'#ffaaa5'
+    },
+    search: {
+        color:'#7c73e6',
+        background:'#c4c1e0'
     }
+
 }

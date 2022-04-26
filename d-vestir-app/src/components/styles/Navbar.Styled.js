@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-display: flex;
-width: 100%;
+  display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  background: var(--primary-color);
+  background: #ececec;
   padding: 1.2rem;
   position: sticky;
   top: 0;
   left: 0;
-  text-decoration:none;
-
+  
   h2 {
     font-size: 40px;
     font-weight: bold;
-    color: #fff;
+    color: black;
   }
+
 
   
 `
