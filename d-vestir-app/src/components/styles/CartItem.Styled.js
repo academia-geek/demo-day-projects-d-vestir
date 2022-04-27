@@ -26,16 +26,16 @@ export const Items = styled.div`
      }
 
      button {
-      width: 50px;
-      height: 50px;
-      border: 1px solid var(--secondary-color);
-      cursor: pointer;
-      transition: all ease-in-out 0.7s;
-      border:none;
-      margin-top:1rem;
-      border-radius:10px;
-      color: ${({ theme }) => theme.error.color};
-      background-color: ${({ theme }) => theme.error.background};
+         width: 50px;
+         height: 50px;
+         border: 1px solid var(--secondary-color);
+         cursor: pointer;
+         transition: all ease-in-out 0.7s;
+         border:none;
+         margin-top:1rem;
+         border-radius:10px;
+         color: ${({ theme }) => theme.error.color};
+         background-color: ${({ theme }) => theme.error.background};
      }
 `
 

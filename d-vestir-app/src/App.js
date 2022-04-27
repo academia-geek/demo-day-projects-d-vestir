@@ -1,4 +1,5 @@
 import './App.css';
+import '@stripe/stripe-js'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

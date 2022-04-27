@@ -29,7 +29,7 @@ function Login() {
 
         dispatch(loginEmailPassword(email, password));
         setAlert(true)
-        // navigate('/contenido');
+        navigate('/products');
 
     }
 

@@ -30,17 +30,17 @@ export const Counter = styled.div`
   background: var(--light-color);
   font-size: 25px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `
 export const DivCart = styled.div`
-display: flex;
-justify-content: space-between;
-margin-rigth: 1rem;
-background: #fff;
-border: none;
-border-radius: 15px;
-align-items: center;
-padding: 0.5rem;
-cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin-rigth: 1rem;
+  background: #fff;
+  border: none;
+  border-radius: 15px;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 `

@@ -22,8 +22,11 @@ const SingleItem = ({ currentItem, addToCart }) => {
             }} />
             <Card>
                 <Title>{currentItem.title}</Title>
+                <h5>Acerca de este artículo.</h5>
                 <Description>{currentItem.description}</Description>
-                <Price>$ {currentItem.price}</Price>
+                <p>Tallas S M L XL</p>
+                <p>Envio GRATIS.</p>
+                <Price>Precio $ {currentItem.price}</Price>
                 <Button onClick={() => addToCart(currentItem.id)}>Añadir </Button>
             </Card>
         </DivDetail>

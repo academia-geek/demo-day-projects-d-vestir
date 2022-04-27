@@ -31,6 +31,10 @@ export const GlobalStyles = createGlobalStyle`
         color:white;
         border:none;
         cursor:pointer;
+
+        &:hover {
+            transform:scale(0.98);
+        }
     }
 
     h3, h4 {
@@ -39,6 +43,7 @@ export const GlobalStyles = createGlobalStyle`
 
     p{
         line-height: 1.3;
+        // color:grey
     }
 `
 

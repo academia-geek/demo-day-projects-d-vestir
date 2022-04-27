@@ -11,7 +11,7 @@ const ProductList = () => {
   return (
     <div>
       {/* <ProductCard/> */}
-      <Products/>
+      {/* <Products/> */}
     </div>
   )
 }
