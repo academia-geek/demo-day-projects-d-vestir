@@ -13,6 +13,7 @@ import PrivateRouters from './PrivateRouters';
 import PublicRouters from './PublicRouters';
 import Header from "../components/Header";
 import LandingPage from "../components/LandingPage";
+import ChatBot from "../components/chatBot/ChatBot";
 
 
 function AppRouter() {
@@ -44,6 +45,7 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Header />
+        <ChatBot/>
       <Routes>
         <Route path="/landinPage" element={
           <PublicRouters isAut={isLoggedIn}>

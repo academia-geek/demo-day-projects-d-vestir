@@ -10,17 +10,16 @@ import { useNavigate } from 'react-router-dom';
 const KEY = 'pk_test_51KrtoMKKdkF9eoZNO1eQg5oKbgVJhozTacAMoLiI8WPbjQJi0hMmLkDMzOcpMZbjfEiqBs4usBLInv320vnh6e7J00keZdl9PF';
 
 const Cart = ({ cart }) => {
+
     const [stripeToken, setStripeToken] = useState(null);
-
     const navigate = useNavigate()
-    const [product, setProduct] = useState({
-        name: 'Jean',
-        price: 1000
-    })
 
-    // const onToken = (token) => {
-    //     setStripeToken(token)
-    // }
+    const onToken = (token) => {
+        setStripeToken(token)
+    }
+    console.log(stripeToken)
+
+
 
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
@@ -38,44 +37,27 @@ const Cart = ({ cart }) => {
         setTotalItems(items)
 
 
-        // const makeRequest = async () => {
-        //     try {
-        //         const response = await
-        //             axios.post('http://localhost:3000/payment', {
-        //                 tokenId: stripeToken.id,
-        //                 amount: `${totalItems}`,
-        //             })
-        //         console.log(response.data)
-        //         navigate('/pago', { data: response.data })
+        const makeRequest = async () => {
+            try {
+                const response = await
+                    axios.post('http://localhost:3000/payment', {
+                        tokenId: stripeToken.id,
+                        amount: `${totalItems * 100}`,
+                    })
+                console.log(response.data)
+                navigate('/pago', { data: response.data })
 
 
-        //     } catch (error) {
-        //         console.log(error)
-        //     }
-        // }
-        // makeRequest()
-
-    }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems, stripeToken])
-
-
-    const payNow = async token => {
-        try {
-          const response = await axios({
-            url: 'http://localhost:3000/cart',
-            method: 'post',
-            data: {
-              amount: totalPrice.price * 100,
-              token,
-            },
-          });
-          if (response.status === 200) {
+            } catch (error) {
+                console.log(error)
+                // navigate('/pago')
+            }
         }
-    } catch (error) {
-            navigate('/pago')
-          console.log(error);
-        }
-      };
-    
+        makeRequest()
+
+    }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems, stripeToken, navigate])
+
+
 
     return (
         <CartDiv>
@@ -100,7 +82,7 @@ const Cart = ({ cart }) => {
                     description={`El total es ${totalPrice}`}
                     amount={totalPrice * 100}
                     currency='COP'
-                    token={payNow}
+                    token={onToken}
                     stripeKey={KEY}
                     allowRememberMe
 
