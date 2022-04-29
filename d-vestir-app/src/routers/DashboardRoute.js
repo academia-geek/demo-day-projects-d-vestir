@@ -6,7 +6,6 @@ import Home from '../components/Home';
 import Products from '../components/Products';
 import Cart from '../components/Cart';
 import SingleItem from '../components/SingleItem';
-import Checkout from '../components/Checkout';
 import PagoExitoso from '../components/PagoExitoso';
 
 import ProductDisplay from '../components/ProductDisplay'
@@ -28,7 +27,6 @@ const DashboardRoute = ({ currentItem }) => {
           <Route path="/product/:id" element={<SingleItem />} />
         )}
 
-        <Route path='/checkout' element={<Checkout />} />
         <Route path='/pago' element={<PagoExitoso />} />
         <Route path='/display' element={<ProductDisplay />} />
         <Route path='*' element={<Navigate to='/' />} />

@@ -1,10 +1,15 @@
 import React from 'react'
+import Mapa from './mapa/Mapa'
+
 
 const PagoExitoso = () => {
   return (
     <div>
         <h1>Su pago ha sido exitoso, gracias por su compra.</h1>
         
+        <section>
+          <Mapa/>
+        </section>
     </div>
   )
 }
