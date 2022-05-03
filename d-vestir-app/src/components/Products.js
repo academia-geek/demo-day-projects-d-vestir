@@ -5,12 +5,17 @@ import { connect } from 'react-redux'
 import { Div } from './styles/Products.Styled'
 
 const Products = ({ products }) => {
+
+
   return (
-    <Div>
-      {products.map(p => (
-        <Product key={p.id} productData={p} />
-      ))}
-    </Div>
+    <>
+
+      <Div>
+        {products.map(p => (
+          <Product key={p.id} productData={p} />
+        ))}
+      </Div>
+    </>
   )
 }
 

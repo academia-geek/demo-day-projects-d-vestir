@@ -2,13 +2,13 @@ import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import Home from '../components/Home';
+// import Home from '../components/Home';
 import Products from '../components/Products';
 import Cart from '../components/Cart';
 import SingleItem from '../components/SingleItem';
 import PagoExitoso from '../components/PagoExitoso';
-
-import ProductDisplay from '../components/ProductDisplay'
+import Contenido from '../components/Contenido'
+import Vender from '../components/Vender';
 
 
 const DashboardRoute = ({ currentItem }) => {
@@ -17,7 +17,7 @@ const DashboardRoute = ({ currentItem }) => {
     <>
       <Routes>
 
-        <Route path='/' element={<Home />} />
+        {/* <Route path='/' element={<Home />} /> */}
 
         <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
@@ -28,7 +28,8 @@ const DashboardRoute = ({ currentItem }) => {
         )}
 
         <Route path='/pago' element={<PagoExitoso />} />
-        <Route path='/display' element={<ProductDisplay />} />
+        <Route path='/contenido' element={<Contenido/>} />
+        <Route path='/vender' element={<Vender />} />
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>
     </>

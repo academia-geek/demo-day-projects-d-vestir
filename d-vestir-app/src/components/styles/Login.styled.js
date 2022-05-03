@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const DivStyled = styled.div`
-    height: 100vh;
+    // height: 100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     place-items:center;
+    padding:2rem 0;
 
     h2 {
         padding-bottom: 2rem;
@@ -82,3 +83,7 @@ export const BtnFacebook = styled(BtnGoogle)`
     background-color: ${({ theme }) => theme.colors.blue};
 `
 
+export const BtnCrear = styled(BtnFacebook)`
+    background-color: ${({ theme }) => theme.btn.background};
+    color: ${({theme})  => theme.btn.color};
+`

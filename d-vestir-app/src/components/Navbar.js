@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { FiShoppingCart } from 'react-icons/fi'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
+import { logout } from '../actions/actionLogin';
 import { Nav, Counter, DivCart } from './styles/Navbar.Styled';
+import { ButtonDele } from './styles/ListUser.Styled';
 
 const Navbar = ({ cart }) => {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [cartCount, setCartCount] = useState(0);
 
@@ -18,19 +23,41 @@ const Navbar = ({ cart }) => {
         setCartCount(count)
     }, [cart, cartCount])
 
+
+    const handleLogout = () => {
+        dispatch(logout())
+
+        navigate('/login')
+    }
+
     return (
         <>
             <Nav>
                 <Link to='/products' style={{ textDecoration: 'none' }}>
-                    <h2>Carrito de compras</h2>
+                    <h3>Compra</h3>
+                </Link>
+                <Link to='/vender' style={{ textDecoration: 'none' }}>
+                    <h3>Vender</h3>
+                </Link>
+                <Link to='/contenido' style={{ textDecoration: 'none' }}>
+                    <h3>Perfil</h3>
                 </Link>
                 <Link to='/cart' style={{ textDecoration: 'none' }}>
                     <DivCart>
-                        {/* <h3>Cart</h3> */}
                         <FiShoppingCart size={'2em'} />
                         <Counter>{cartCount}</Counter>
                     </DivCart>
                 </Link>
+
+                <div>
+                    <div>
+                        <ButtonDele
+                            onClick={handleLogout}>
+                            Cerrar Sesión
+                        </ButtonDele>
+                    </div>
+                </div>
+
             </Nav>
         </>
     )

@@ -23,7 +23,9 @@ export const DivForm = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
-    text-align:left;
+    text-align:center;
+    place-content:center;
+    padding:1rem 1rem;
 
     h1 {
         font-size: 1.5rem;
@@ -35,7 +37,7 @@ export const DivForm = styled.div`
 
 
         input{
-            width: 300px;
+            width: 400px;
             height: 40px;
             margin: 5px;
             border: 1px solid ${({ theme }) => theme.colors.border};

@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { loginEmailPassword, loginGoogle, loginFacebook } from '../actions/actionLogin'
 
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
-import { BtnFacebook, BtnGoogle, DivStyled } from './styles/Login.styled';
+import { BtnCrear, BtnFacebook, BtnGoogle, DivStyled } from './styles/Login.styled';
 
 function Login() {
 
@@ -71,6 +71,7 @@ function Login() {
                             onChange={handleInputChange}
                         />
                     </Form.Group>
+
                     <Button variant="secondary" type="submit">
                         Continuar
                     </Button>
@@ -100,7 +101,7 @@ function Login() {
                         </Container>
                     </Container>
                     <Link to="/registro">
-                        <button>Crea tu cuenta</button>
+                        <BtnCrear>Crea tu cuenta</BtnCrear>
                     </Link>
                     <br />
                     <p>Al continuar, aceptas las Condiciones de uso y el Aviso de privacidad de d-vestir.</p>

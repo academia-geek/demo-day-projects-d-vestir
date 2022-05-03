@@ -4,12 +4,10 @@ import { useForm } from '../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { registroEmailPasswordNombre } from '../actions/actionRegister';
 import { DivStyledRegistro } from './styles/Registro.Styled';
-
+import { BtnCrear } from './styles/Login.styled';
 
 
 export const Registro = () => {
-
-
 
     const dispatch = useDispatch();
 
@@ -81,12 +79,12 @@ export const Registro = () => {
                     </Form.Group>
 
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="secondary" type="submit">
                         Registrarse
                     </Button>
 
                     <Link to="/Login">
-                        <button>Login</button>
+                        <BtnCrear>Login</BtnCrear>
                     </Link>
 
                 </Form>

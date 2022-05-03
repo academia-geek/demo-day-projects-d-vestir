@@ -6,15 +6,13 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 import Login from '../components/Login';
 import { Registro } from '../components/Registro';
-import Contenido from "../components/Contenido";
 
 import DashboardRoute from './DashboardRoute';
 import PrivateRouters from './PrivateRouters';
 import PublicRouters from './PublicRouters';
 import Header from "../components/Header";
 import LandingPage from "../components/LandingPage";
-import ChatBot from "../components/chatBot/ChatBot";
-
+import Footer from '../components/Footer';
 
 function AppRouter() {
 
@@ -45,9 +43,8 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <Header />
-        <ChatBot/>
       <Routes>
-        <Route path="/landinPage" element={
+        <Route path="/" element={
           <PublicRouters isAut={isLoggedIn}>
             <LandingPage />
           </PublicRouters>
@@ -70,11 +67,9 @@ function AppRouter() {
           <DashboardRoute />
         </PrivateRouters>} />
 
-        <Route path="/contenido" element={<PrivateRouters isAut={isLoggedIn}>
-          <Contenido />
-        </PrivateRouters>} />
 
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }

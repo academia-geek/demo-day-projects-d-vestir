@@ -11,6 +11,11 @@ export const ProductDiv = styled.div`
     border-radius: 10px;
     object-fit: cover;
 
+    &:hover {
+        transform:scale(0.98);
+        transition: all .5s ease-in-out;
+    }
+
 
     img {
         width: 250px;
@@ -62,7 +67,7 @@ export const Add =  styled.button`
     padding: 1rem;
     color: ${({ theme }) => theme.success.color};
     background-color: ${({ theme }) => theme.success.background};
-    border-radius: 10px;
+    border-radius: 4px;
     font-size: 1rem;
     font-weight: bold;
 `

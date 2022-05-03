@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const DivStyledRegistro = styled.div`
-    height: 100vh;
+    // height: 100vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -15,7 +15,7 @@ export const DivStyledRegistro = styled.div`
     form {
         border: 1px solid #AAB8C2;
         border-radius: 10px;
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
         display: flex;
         flex-direction: column;
         align-items:center;
@@ -32,7 +32,7 @@ export const DivStyledRegistro = styled.div`
         input {
             width: 300px;
             height: 40px;
-            margin: 10px;
+            margin: 2px;
             border: 1px solid #AAB8C2;
             border-radius:5px;
         }

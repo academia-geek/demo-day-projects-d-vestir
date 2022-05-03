@@ -3,39 +3,46 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { addToCart, loadCurrentItem } from '../actions/shoppingActions';
 
-import { ProductDiv, Details, Title, Description, Price, View, Add, Options } from './styles/Product.Styled';
-import {BsSearch} from 'react-icons/bs'
+import { ProductDiv, Details, Title, Description, Price, Add, Options } from './styles/Product.Styled';
+// import { BsSearch } from 'react-icons/bs'
 
 const Product = ({ productData, addToCart, loadCurrentItem }) => {
+
+    
     return (
+        <>
+            <ProductDiv>
+              
+                <div >
+                    <div>
+                        <Link to={`/product/${productData.id}`}>
+                            <img
+                                onClick={() => loadCurrentItem(productData)}
+                                src={productData.image}
+                                alt={productData.title}
+                            />
+                        </Link>
+                    </div>
 
-        <ProductDiv>
-            <div >
-                <div>
-                    <img
-                        src={productData.image}
-                        alt={productData.title}
-                    />
-                </div>
+                    <Details >
+                        <Title >{productData.title}</Title>
+                        <Description >{productData.genero}</Description>
+                        <Price >$ {productData.price} COP.</Price>
+                    </Details>
 
-                <Details >
-                    <Title >{productData.title}</Title>
-                    {/* <Description >{productData.description}</Description> */}
-                    <Price >$ {productData.price}</Price>
-                </Details>
-
-                <Options>
-                    <Link to={`/product/${productData.id}`}>
+                    <Options>
+                        {/* <Link to={`/product/${productData.id}`}>
                         <View onClick={() => loadCurrentItem(productData)}>
                             <BsSearch size={'1.5em'}/>
                         </View>
-                    </Link>
-                    <Add onClick={() => addToCart(productData.id)}>
-                        Añadir
-                    </Add>
-                </Options>
-            </div>
-        </ProductDiv>
+                    </Link> */}
+                        <Add onClick={() => addToCart(productData.id)}>
+                            Añadir
+                        </Add>
+                    </Options>
+                </div>
+            </ProductDiv>
+        </>
     )
 }
 

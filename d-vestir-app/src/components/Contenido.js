@@ -7,7 +7,8 @@ import { fileUpload } from '../helpers/FileUpload';
 import { listUsers, userAddAsincrono } from '../actions/actionUsers';
 import { ListUsers } from './ListUsers';
 
-import { DivForm, DivWelcome } from './styles/Contenido.Styled';
+import { DivForm } from './styles/Contenido.Styled';
+import { Form } from 'react-bootstrap';
 
 const Contenido = () => {
 
@@ -36,12 +37,6 @@ const Contenido = () => {
   }
 
 
-  const handleLogout = () => {
-    dispatch(logout())
-
-    navigate('/login')
-  }
-
   const handlePicture = () => {
     document.querySelector('#fileSelector').click();
 
@@ -69,29 +64,18 @@ const Contenido = () => {
 
   return (
     <>
-      <DivWelcome>
-
-        <h2>Bienvenido!</h2>
-        <button>Comprar</button>
-
-        <div>
-          <button className="btn btn-primary" type='button'
-            onClick={handleLogout}>Logout</button>
-        </div>
-      </DivWelcome>
-
       <div>
         <DivForm>
-
           <form onSubmit={handleRegistro}>
-            <h1>Crea tu perfil</h1>
+            <h1>Completa tu perfil</h1>
+            <p>Para comprar o vender debe completar toda la información.</p>
             <div className="form-group">
               <div className="form-group col-md-4">
                 <input
                   className="form-control"
                   type="text" name="cedula"
                   id="cedula"
-                  placeholder='Cedula'
+                  placeholder='Cédula'
                   value={cedula}
                   onChange={handleInputChange} />
               </div>
@@ -124,7 +108,7 @@ const Contenido = () => {
                   type="text"
                   name="tarjeta"
                   id="tarjeta"
-                  placeholder='Tarjeta de Credito xxx - xxx - xxx'
+                  placeholder='Tarjeta de Crédito xxx - xxx - xxx'
                   value={tarjeta}
                   onChange={handleInputChange} />
               </div>
@@ -146,7 +130,7 @@ const Contenido = () => {
                   type="text"
                   name="direccion"
                   id="direccion"
-                  placeholder='Direccion'
+                  placeholder='Dirección'
                   value={direccion}
                   onChange={handleInputChange} />
               </div>
@@ -154,7 +138,7 @@ const Contenido = () => {
               <div className="form-group col-md-4">
                 <input
                   className="form-control"
-                  ype="text"
+                  type="email"
                   name="email"
                   id="email"
                   placeholder='E-mail'
@@ -182,7 +166,6 @@ const Contenido = () => {
               <br />
               <div>
                 <button
-                  className="btn btn-success"
                   type='submit'>Guardar</button>
               </div>
 

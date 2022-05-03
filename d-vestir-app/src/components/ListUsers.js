@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteUsers, editUsers } from '../actions/actionUsers';
 import EditarUsuarios from './EditarUsuarios';
-import { Img, DivTable, ButtonDele, ButtonEdit, Table, DivBuscar } from './styles/ListUser.Styled';
+import { Img, DivTable, ButtonDele, ButtonEdit, DivBuscar } from './styles/ListUser.Styled';
 
 export const ListUsers = () => {
 

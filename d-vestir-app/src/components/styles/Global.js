@@ -57,6 +57,7 @@ export const theme = {
         border:'#AAB8C2',
         shadow: ' rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
         header:'#131921',
+        footer: '#131921',
     },
     success: {
         color:'#236969',
@@ -66,7 +67,7 @@ export const theme = {
         color:'#77204b',
         background:'#ffaaa5'
     },
-    search: {
+    btn: {
         color:'#7c73e6',
         background:'#c4c1e0'
     }

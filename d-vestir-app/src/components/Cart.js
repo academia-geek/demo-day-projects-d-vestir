@@ -88,7 +88,7 @@ const Cart = ({ cart }) => {
 
                 >
                     <Button>
-                        Comprar
+                        Comprar ${totalPrice}
                     </Button>
 
                 </StripeCheckout>
