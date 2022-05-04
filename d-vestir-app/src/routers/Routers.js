@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 // import { loginEmailPassword } from '../actions/actionLogin';
 
@@ -13,6 +12,7 @@ import PublicRouters from './PublicRouters';
 import Header from "../components/Header";
 import LandingPage from "../components/LandingPage";
 import Footer from '../components/Footer';
+import Loading from "../components/loading/Loading";
 
 function AppRouter() {
 
@@ -34,7 +34,7 @@ function AppRouter() {
 
   if (checking) {
     return (
-      <h1>Espere....</h1>
+      <Loading/>
     )
   }
 

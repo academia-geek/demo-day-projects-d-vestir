@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useForm } from '../hooks/useForm';
 import { editUsers } from '../actions/actionUsers';
-import { Form, Modal, ModalBody } from 'react-bootstrap';
+import { Button, Form, Modal, ModalBody } from 'react-bootstrap';
 import { DivForm } from './styles/Contenido.Styled';
 
 
@@ -41,7 +41,7 @@ const EditarUsuarios = ({ modal, setModal, modalBooleana }) => {
                         <Modal.Title>Actualizar datos</Modal.Title>
                     </Modal.Header>
                     <ModalBody>
-                        <DivForm onSubmit={handleSubmit}>
+                        <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Cédula</Form.Label>
                                 <Form.Control type="text" name="cedula" placeholder="Enter nombre" value={cedula} onChange={handleInputChange} />
@@ -66,13 +66,13 @@ const EditarUsuarios = ({ modal, setModal, modalBooleana }) => {
 
                             </Form.Group>
 
-                            <button variant="secondary" onClick={handleClose}>
+                            <Button variant="secondary" onClick={handleClose}>
                                 Close
-                            </button>
-                            <button type="submit" variant="primary" onClick={handleSubmit}>
+                            </Button>
+                            <Button type="submit" variant="primary" onClick={handleSubmit}>
                                 Save
-                            </button>
-                        </DivForm>
+                            </Button>
+                        </Form>
 
                     </ModalBody>
 

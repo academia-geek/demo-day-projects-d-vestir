@@ -46,7 +46,7 @@ function Login() {
             <DivStyled>
                 <Form onSubmit={handleLogin}>
                     <Link to='/Home'>
-                        <img src='/images/logo-amazon.png' alt='' />
+                        <img src='' alt='' />
                     </Link>
                     <h2>Iniciar sesión</h2>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

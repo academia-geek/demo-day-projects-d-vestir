@@ -52,7 +52,6 @@ export const deleteUsers = (email) => {
     }
 }
 
-
 // Funcion -  Eliminar usuarios (Sincrona)
 export const Delete = (email) => {
     return {

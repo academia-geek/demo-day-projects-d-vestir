@@ -3,7 +3,7 @@ import { db } from '../firebase/firebaseConfig'
 import { addDoc, collection, deleteDoc, getDocs, query, where, doc, updateDoc } from 'firebase/firestore';
 
 // Accion - Funcion asincronica -- Creacion o agregar productos.
-export const addProduct = (producto, talla, precio, img, descripcion) => {
+export const addProduct = (producto, talla, precio, img, descripcion, codigo) => {
     return (dispatch) => {
         const newProduct = {
             producto,
@@ -11,6 +11,7 @@ export const addProduct = (producto, talla, precio, img, descripcion) => {
             precio,
             img,
             descripcion,
+            codigo
         }
         addDoc(collection(db, 'Productos'), newProduct)
             .then(resp => {
@@ -53,60 +54,57 @@ export const List = (products) => {
 }
 
 // Eliminar
-export const deleteProduct = (id) => {
-    return async (dispatch, getState) => {
-        const uid = getState().login.id;
-        await deleteDoc(doc(db, `${uid}/Productos/data`, `${id}`))
+export const deleteProduct = (codigo) => {
+    return async (dispatch) => {
+        const productCollection = collection(db, 'Productos');
+        const q = query(productCollection, where('codigo', '==', codigo))
 
-        dispatch(Delete(id))
-        dispatch(listProduct(uid))
+        const data = await getDocs(q)
+        data.forEach(item => {
+            deleteDoc(doc(db, 'Productos', item.id))
+        })
+        dispatch(Delete(codigo))
     }
 }
 
-export const Delete = (id) => {
+export const Delete = (codigo) => {
     return {
         type: typesSell.DELETE_NEW_PRODUCT,
-        payload: id
+        payload: codigo
     }
 }
 
 // Editar
-export const Edit = (id, products) => {
+export const Edit = (products) => {
     return {
         type: typesSell.EDIT_NEW_PRODUCT,
-        payload: {
-            id,
-            ...products
-        }
+        payload: products
     }
 }
 
-export const editProduct = (products) => {
-    return async (dispatch, getState) => {
-        const id = getState().login.id
-        console.log(products)
+export const editProduct = (codigo, products) => {
+    return async (dispatch) => {
+        const productCollection = collection(db, 'Productos');
+        const q = query(productCollection, where('codigo', '==', codigo))
 
-        const Editar = {
-            producto: products.producto,
-            talla: products.talla,
-            precio: products.precio,
-            descripcion: products.descripcion,
-            img: products.img
-        }
-        const card = { ...Editar }
-        delete card.id
-
-        const docRef = await doc(db, `${id}/Productos/data`, `${products.id}`)
-        console.log(docRef)
-
-        const updateTimestamp = await updateDoc(docRef, {
-            producto: products.producto,
-            talla: products.talla,
-            precio: products.precio,
-            descripcion: products.descripcion,
-            img: products.img
+        const data = await getDocs(q)
+        let id
+        data.forEach(async (item) => {
+            id = item.id
         })
+        console.log(id)
 
-        dispatch(listProduct(id))
+        const referencia = doc(db, 'Productos', id);
+        await updateDoc(referencia, products)
+            .then(res => {
+                console.log(res)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        dispatch(Edit(products))
+        dispatch(listProduct())
+        console.log(products)
     }
 }
+

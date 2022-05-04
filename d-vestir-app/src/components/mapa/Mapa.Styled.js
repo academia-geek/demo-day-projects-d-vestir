@@ -35,3 +35,7 @@ export const Input = styled.input`
 export const DivInput = styled.div`
     background-color:white;
 `
+export const StyledMap = styled.div`
+ padding:10rem 5rem;
+
+`

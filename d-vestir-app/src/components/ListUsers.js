@@ -15,13 +15,11 @@ export const ListUsers = () => {
     const { users } = useSelector(state => state.users);
     // console.log(users);
 
-
     const editar = (email) => {
 
         const showUsuarios = users.find(u => u.email === email)
         setModal(true)
         setSendData(showUsuarios)
-
     }
 
     useEffect(() => {

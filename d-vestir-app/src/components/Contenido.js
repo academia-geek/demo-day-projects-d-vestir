@@ -26,8 +26,6 @@ const Contenido = () => {
     imagen: ''
   })
 
-
-
   let { cedula, nombres, username, tarjeta, celular, direccion, email, imagen } = values;
 
   const handleRegistro = e => {
@@ -55,7 +53,6 @@ const Contenido = () => {
 
   }
 
-
   useEffect(() => {
     dispatch(listUsers())
   }, [])
@@ -68,7 +65,7 @@ const Contenido = () => {
         <DivForm>
           <form onSubmit={handleRegistro}>
             <h1>Completa tu perfil</h1>
-            <p>Para comprar o vender debe completar toda la información.</p>
+            <p>Para comprar o vender debes completar toda la información.</p>
             <div className="form-group">
               <div className="form-group col-md-4">
                 <input

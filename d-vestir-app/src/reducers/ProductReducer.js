@@ -17,7 +17,7 @@ export const ProductReducer = (state = initialState, action) => {
             }
         case typesSell.DELETE_NEW_PRODUCT:
             return {
-                products: state.products.filter(p => p.id !== action.payload)
+                products: state.products.filter(p => p.codigo !== action.payload)
             }
         case typesSell.EDIT_NEW_PRODUCT:
             return {
