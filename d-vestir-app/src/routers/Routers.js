@@ -10,7 +10,7 @@ import DashboardRoute from './DashboardRoute';
 import PrivateRouters from './PrivateRouters';
 import PublicRouters from './PublicRouters';
 import Header from "../components/Header";
-import LandingPage from "../components/LandingPage";
+import LandingPage from "../components/landing/LandingPage";
 import Footer from '../components/Footer';
 import Loading from "../components/loading/Loading";
 
@@ -34,7 +34,7 @@ function AppRouter() {
 
   if (checking) {
     return (
-      <Loading/>
+      <Loading />
     )
   }
 
@@ -44,7 +44,7 @@ function AppRouter() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={
+        <Route path="/landing" element={
           <PublicRouters isAut={isLoggedIn}>
             <LandingPage />
           </PublicRouters>
@@ -69,7 +69,7 @@ function AppRouter() {
 
 
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }

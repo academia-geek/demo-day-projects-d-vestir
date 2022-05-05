@@ -30,18 +30,16 @@ const CartItem = ({ itemData, removeFromCart, adjustQty }) => {
                     <Price>${itemData.price} </Price>
                     <Cantidad>
                         <div>
-                            {/* <label htmlFor="qty">Unidades</label> */}
+                            +/-
                             <input
                                 min="1"
                                 type="number"
-                                id="qty"
                                 name="qty"
                                 value={input}
                                 onChange={onChangeHandler}
                             />
                             <button
                                 onClick={() => removeFromCart(itemData.id)}>
-                                {/* Eliminar */}
                                 <TiDelete size={'2em'} />
                             </button>
                         </div>

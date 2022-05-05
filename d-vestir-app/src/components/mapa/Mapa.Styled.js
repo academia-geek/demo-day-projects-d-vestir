@@ -36,6 +36,10 @@ export const DivInput = styled.div`
     background-color:white;
 `
 export const StyledMap = styled.div`
- padding:10rem 5rem;
-
+    padding:2rem 5rem;
+    padding-bottom: 5rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto;
 `

@@ -3,15 +3,15 @@ import styled from 'styled-components';
 export const Items = styled.div`
    display: flex;
    margin: 1rem;
-   border-radius: 10px;
+   border-radius: 5px;
    padding: 1rem 1rem;
    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
    align-items:center;
    justify-content:center;
-   width:500px;
+   width:400px;
 
      img {
-        width: 150px;
+        width: 120px;
         object-fit: contain;
         border-radius: 10px;
      }
@@ -49,6 +49,6 @@ export const Detail = styled.div`
 export const Cantidad = styled.div`
      display:grid;
      aling-items:center;
-
+     justify-content:space-around;
 
 `

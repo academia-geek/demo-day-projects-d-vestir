@@ -20,7 +20,6 @@ const Cart = ({ cart }) => {
     console.log(stripeToken)
 
 
-
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
 
@@ -45,18 +44,17 @@ const Cart = ({ cart }) => {
                         amount: `${totalItems * 100}`,
                     })
                 console.log(response.data)
-                navigate('/pago', { data: response.data })
+                navigate('/exitoso', { data: response.data })
 
 
             } catch (error) {
                 console.log(error)
-                // navigate('/pago')
+                // navigate('/exitoso')
             }
         }
         makeRequest()
 
     }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems, stripeToken, navigate])
-
 
 
     return (
@@ -70,8 +68,9 @@ const Cart = ({ cart }) => {
                 <h3>Orden de compra</h3>
                 <Price>
                     <p>Cantidad Unidades ({totalItems})</p>
-                    <p>Total a pagar</p>
-                    <Price> ${totalPrice}</Price>
+                    <p>Subtotal: ${(totalPrice.toFixed(2)) / (1,1)} </p>
+                    <p>Gastos de envío: $ 0.0</p>
+                    <Price>Total a pagar: ${totalPrice}</Price>
                 </Price>
 
                 <StripeCheckout
@@ -82,21 +81,18 @@ const Cart = ({ cart }) => {
                     description={`El total es ${totalPrice}`}
                     amount={totalPrice * 100}
                     currency='COP'
+                    locale='es'
                     token={onToken}
                     stripeKey={KEY}
                     allowRememberMe
-
+                    closed={() => navigate('/exitoso')}
+                    // email='contacto@dvestir.com'
                 >
                     <Button>
                         Comprar ${totalPrice}
                     </Button>
-
                 </StripeCheckout>
             </Content>
-
-
-
-
         </CartDiv>
     )
 }

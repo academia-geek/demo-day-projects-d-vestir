@@ -8,7 +8,7 @@ const Loading = () => {
         <>
             <StyledSpinner>
                 <TraceSpinner
-                    size={50}
+                    size={70}
                     color='#686769'
                     loading={true}
                 />

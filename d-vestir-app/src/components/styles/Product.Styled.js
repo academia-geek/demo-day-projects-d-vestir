@@ -1,19 +1,20 @@
 import styled from 'styled-components';
 
 export const ProductDiv = styled.div`
-    width: 300px;
-    margin: 3rem 1rem;
-    padding: 1rem 1rem;
+    width: 280px;
+    margin: 2rem 0.4rem;
+    padding: 1rem 0.5rem;
     justify-content: space-between;
     aling-items:center;
     place-items:center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    border-radius: 10px;
+    border-radius: 5px;
     object-fit: cover;
 
     &:hover {
         transform:scale(0.98);
         transition: all .5s ease-in-out;
+        border-color:#DCDCDC;
     }
 
 

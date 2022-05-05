@@ -26,7 +26,6 @@ const Footer = () => {
                         <li>Contáctenos</li>
                     </ul>
                     <StyledIcons>
-
                         <ul>
                             <li>
                                 <a href='http://#'>

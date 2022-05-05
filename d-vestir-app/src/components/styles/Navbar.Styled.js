@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
   display: flex;
@@ -18,8 +19,6 @@ export const Nav = styled.nav`
     color: black;
 
   }
-
-
   
 `
 
@@ -28,7 +27,6 @@ export const Counter = styled.div`
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  color: dark;
   background: var(--light-color);
   font-size: 25px;
   display: flex;
@@ -45,4 +43,7 @@ export const DivCart = styled.div`
   align-items: center;
   padding: 0.5rem 1rem;
   cursor: pointer;
+`
+export const NavLink = styled(Link)`
+  text-decoration:none;
 `

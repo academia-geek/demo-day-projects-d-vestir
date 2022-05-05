@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux';
 import { FiShoppingCart } from 'react-icons/fi'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { logout } from '../actions/actionLogin';
-import { Nav, Counter, DivCart } from './styles/Navbar.Styled';
+import { Nav, Counter, DivCart, NavLink } from './styles/Navbar.Styled';
 import { ButtonDele } from './styles/ListUser.Styled';
 
 const Navbar = ({ cart }) => {
@@ -33,21 +33,21 @@ const Navbar = ({ cart }) => {
     return (
         <>
             <Nav>
-                <Link to='/products' style={{ textDecoration: 'none' }}>
+                <NavLink to='/products'>
                     <h3>Compra</h3>
-                </Link>
-                <Link to='/vender' style={{ textDecoration: 'none' }}>
+                </NavLink>
+                <NavLink to='/vender'>
                     <h3>Vender</h3>
-                </Link>
-                <Link to='/contenido' style={{ textDecoration: 'none' }}>
+                </NavLink>
+                <NavLink to='/contenido'>
                     <h3>Perfil</h3>
-                </Link>
-                <Link to='/cart' style={{ textDecoration: 'none' }}>
+                </NavLink>
+                <NavLink to='/cart'>
                     <DivCart>
                         <FiShoppingCart size={'2em'} />
                         <Counter>{cartCount}</Counter>
                     </DivCart>
-                </Link>
+                </NavLink>
 
                 <div>
                     <div>

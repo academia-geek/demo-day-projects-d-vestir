@@ -6,7 +6,9 @@ import { connect } from 'react-redux';
 import Products from '../components/Products';
 import Cart from '../components/Cart';
 import SingleItem from '../components/SingleItem';
-import PagoExitoso from '../components/PagoExitoso';
+import PagoExitoso from '../components/pagos/PagoExitoso';
+import Seguimiento from '../components/pagos/Seguimiento';
+import PagoRechazado from '../components/pagos/PagoRechazado';
 import Contenido from '../components/Contenido'
 import Vender from '../components/Vender';
 
@@ -18,7 +20,6 @@ const DashboardRoute = ({ currentItem }) => {
       <Routes>
 
         {/* <Route path='/' element={<Home />} /> */}
-
         <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
         {!currentItem ? (
@@ -27,7 +28,9 @@ const DashboardRoute = ({ currentItem }) => {
           <Route path="/product/:id" element={<SingleItem />} />
         )}
 
-        <Route path='/pago' element={<PagoExitoso />} />
+        <Route path='/exitoso' element={<PagoExitoso />} />
+        <Route path='/seguimiento' element={<Seguimiento/>}/>
+        <Route path='/rechazado' element={<PagoRechazado/>}/>
         <Route path='/contenido' element={<Contenido/>} />
         <Route path='/vender' element={<Vender />} />
         <Route path='*' element={<Navigate to='/' />} />
