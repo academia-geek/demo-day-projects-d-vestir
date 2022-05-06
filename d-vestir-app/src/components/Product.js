@@ -2,13 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { addToCart, loadCurrentItem } from '../actions/shoppingActions';
-import party from 'party-js'
 
 import { ProductDiv, Details, Title, Description, Price, Add, Options } from './styles/Product.Styled';
 // import { BsSearch } from 'react-icons/bs'
 
 const Product = ({ productData, addToCart, loadCurrentItem }) => {
-
     
     return (
         <>

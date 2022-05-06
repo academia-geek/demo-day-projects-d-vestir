@@ -7,7 +7,7 @@ import { StyledPago, DivWrong } from './Pagos.Styled'
 const PagoRechazado = () => {
   return (
     <StyledPago>
-      {/* <Snow /> */}
+      <Snow />
       <DivWrong>
         <i>
           <MdError size={'3em'} />

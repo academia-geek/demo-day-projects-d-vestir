@@ -6,18 +6,19 @@ export const Nav = styled.nav`
   width: 100%;
   justify-content: right;
   align-items: center;
-  background: #ececec;
+  background: #00c49a;
   padding: 1.2rem;
   position: sticky;
   top: 0;
   left: 0;
   gap: 1rem;
   
-  h2 {
-    font-size: 40px;
-    font-weight: bold;
-    color: black;
-
+  h3 {
+    font-size: 20px;
+    // font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing:2px;
   }
   
 `

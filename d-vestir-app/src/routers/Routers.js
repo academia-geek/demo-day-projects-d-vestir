@@ -9,7 +9,6 @@ import { Registro } from '../components/Registro';
 import DashboardRoute from './DashboardRoute';
 import PrivateRouters from './PrivateRouters';
 import PublicRouters from './PublicRouters';
-import Header from "../components/Header";
 import LandingPage from "../components/landing/LandingPage";
 import Footer from '../components/Footer';
 import Loading from "../components/loading/Loading";
@@ -39,10 +38,8 @@ function AppRouter() {
   }
 
 
-
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/landing" element={
           <PublicRouters isAut={isLoggedIn}>

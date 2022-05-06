@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { logout } from '../actions/actionLogin';
 import { useForm } from '../hooks/useForm';
 import { fileUpload } from '../helpers/FileUpload';
 import { listUsers, userAddAsincrono } from '../actions/actionUsers';
@@ -12,7 +10,6 @@ import { Form } from 'react-bootstrap';
 
 const Contenido = () => {
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [values, handleInputChange, reset] = useForm({
@@ -34,12 +31,6 @@ const Contenido = () => {
     reset();
   }
 
-
-  const handlePicture = () => {
-    document.querySelector('#fileSelector').click();
-
-  }
-
   const handleFile = (e) => {
     const file = e.target.files[0];
     fileUpload(file)
@@ -54,7 +45,7 @@ const Contenido = () => {
   }
 
   useEffect(() => {
-    dispatch(listUsers())
+    dispatch(listUsers()) // eslint-disable-next-line
   }, [])
 
 
@@ -63,7 +54,7 @@ const Contenido = () => {
     <>
       <div>
         <DivForm>
-          <form onSubmit={handleRegistro}>
+          <Form onSubmit={handleRegistro}>
             <h1>Completa tu perfil</h1>
             <p>Para comprar o vender debes completar toda la información.</p>
             <div className="form-group">
@@ -74,7 +65,9 @@ const Contenido = () => {
                   id="cedula"
                   placeholder='Cédula'
                   value={cedula}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  required={true}
+                />
               </div>
 
               <div className="form-group col-md-4">
@@ -85,7 +78,9 @@ const Contenido = () => {
                   id="nombres"
                   placeholder='Nombres'
                   value={nombres}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  required={true}
+                />
               </div>
 
               <div className="form-group col-md-4">
@@ -96,7 +91,9 @@ const Contenido = () => {
                   id="username"
                   placeholder='Username'
                   value={username}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  required={true}
+                />
               </div>
 
               <div className="form-group col-md-4">
@@ -107,7 +104,9 @@ const Contenido = () => {
                   id="tarjeta"
                   placeholder='Tarjeta de Crédito xxx - xxx - xxx'
                   value={tarjeta}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  required={true}
+                />
               </div>
 
               <div className="form-group col-md-4">
@@ -118,7 +117,9 @@ const Contenido = () => {
                   id="celular"
                   placeholder='(+ 57)'
                   value={celular}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  required={true}
+                />
               </div>
 
               <div className="form-group col-md-4">
@@ -129,7 +130,9 @@ const Contenido = () => {
                   id="direccion"
                   placeholder='Dirección'
                   value={direccion}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  required={true}
+                />
               </div>
 
               <div className="form-group col-md-4">
@@ -140,36 +143,28 @@ const Contenido = () => {
                   id="email"
                   placeholder='E-mail'
                   value={email}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  required={true}
+                />
               </div>
 
               <br />
               <div className="form-group col-md-4">
                 <input
+                  className="form-control"
                   id="fileSelector"
                   type="file"
                   name="file"
-                  // style={{ display: 'none' }}
                   onChange={handleFile}
                 />
-
-                {/* <button
-                className="btn btn-success"
-                type='button'
-                onClick={handlePicture}>
-                Imagen</button> */}
-
               </div>
               <br />
               <div>
                 <button
                   type='submit'>Guardar</button>
               </div>
-
-
-
             </div>
-          </form>
+          </Form>
         </DivForm>
       </div>
       <ListUsers />

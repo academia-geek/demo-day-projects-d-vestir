@@ -30,7 +30,7 @@ export const Registro = () => {
         <div>
             <DivStyledRegistro>
                 <Form onSubmit={handleRegistro}>
-                    <Link to='/Home'>
+                    <Link to='/landing'>
                         <img src='/images/logo-amazon.png' alt='' />
                     </Link>
                     <h2>Registro</h2>
@@ -42,6 +42,7 @@ export const Registro = () => {
                             name="nombre"
                             value={nombre}
                             onChange={handleInputChange}
+                            required={true}
                         />
                     </Form.Group>
 
@@ -53,6 +54,7 @@ export const Registro = () => {
                             name="email"
                             value={email}
                             onChange={handleInputChange}
+                            required={true}
                         />
                     </Form.Group>
 
@@ -64,6 +66,7 @@ export const Registro = () => {
                             name="pass1"
                             value={pass1}
                             onChange={handleInputChange}
+                            required={true}
                         />
                     </Form.Group>
 
@@ -75,6 +78,8 @@ export const Registro = () => {
                             name="pass2"
                             value={pass2}
                             onChange={handleInputChange}
+                            required={true}
+
                         />
                     </Form.Group>
 

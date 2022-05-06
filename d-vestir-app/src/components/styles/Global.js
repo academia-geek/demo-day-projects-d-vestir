@@ -16,14 +16,14 @@ export const GlobalStyles = createGlobalStyle`
         padding:0;
         box-sizing: border-box;
         font-size:1rem;
+        font-family: 'Oxygen', sans-serif;
     }
 
     body {
         align-items:center;
         place-items:center;
         display:flex;
-        font-family: 'Oxygen', sans-serif;
-        background-color:white;
+        background-color:#fff8f0;
     }
 
     button {
@@ -49,7 +49,7 @@ export const GlobalStyles = createGlobalStyle`
 
 export const theme = {
     colors: {
-        orange: '#e47911',
+        orange: '#fb8f67',
         red: '#db4a39',
         blue: '#3b5998',
         text: '#0E7184',

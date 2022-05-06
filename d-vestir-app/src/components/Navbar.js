@@ -34,10 +34,13 @@ const Navbar = ({ cart }) => {
         <>
             <Nav>
                 <NavLink to='/products'>
-                    <h3>Compra</h3>
+                    <h3>Comprar</h3>
                 </NavLink>
                 <NavLink to='/vender'>
                     <h3>Vender</h3>
+                </NavLink>
+                <NavLink to='/donar'>
+                    <h3>Donar</h3>
                 </NavLink>
                 <NavLink to='/contenido'>
                     <h3>Perfil</h3>

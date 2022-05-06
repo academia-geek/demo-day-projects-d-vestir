@@ -9,6 +9,8 @@ export const Items = styled.div`
    align-items:center;
    justify-content:center;
    width:400px;
+  background-color:white;
+
 
      img {
         width: 120px;
@@ -50,5 +52,6 @@ export const Cantidad = styled.div`
      display:grid;
      aling-items:center;
      justify-content:space-around;
+
 
 `

@@ -14,8 +14,6 @@ function Login() {
     const dispatch = useDispatch();
 
     const [alert, setAlert] = useState(false);
-    const [validacion, setValidacion] = useState('true')
-
 
     const [values, handleInputChange] = useForm({
         email: '',
@@ -35,17 +33,21 @@ function Login() {
 
     const handleGoogle = () => {
         dispatch(loginGoogle());
+        navigate('/products');
+
     }
 
     const handleFacebook = () => {
         dispatch(loginFacebook());
+        navigate('/products');
+
     }
 
     return (
         <>
             <DivStyled>
                 <Form onSubmit={handleLogin}>
-                    <Link to='/Home'>
+                    <Link to='/landing'>
                         <img src='' alt='' />
                     </Link>
                     <h2>Iniciar sesión</h2>
@@ -53,22 +55,23 @@ function Login() {
                         <Form.Label></Form.Label>
                         <Form.Control
                             type="email"
-                            placeholder="Enter email"
+                            placeholder="Ingrese su email"
                             name="email"
                             value={email}
                             onChange={handleInputChange}
+                            required={true}
                         />
-
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label></Form.Label>
                         <Form.Control
                             type="password"
-                            placeholder="Password"
+                            placeholder="Ingrese la contraseña"
                             name="password"
                             value={password}
                             onChange={handleInputChange}
+                            required={true}
                         />
                     </Form.Group>
 

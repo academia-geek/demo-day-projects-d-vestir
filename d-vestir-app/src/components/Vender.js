@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { addProduct, listProduct, deleteProduct, editProduct } from '../actions/actionSell'
+import { addProduct, listProduct, deleteProduct } from '../actions/actionSell'
 import { useForm } from '../hooks/useForm';
 import { fileUpload } from '../helpers/FileUpload'
-import { ButtonDele, ButtonEdit } from './styles/ListUser.Styled';
+import { ButtonDele } from './styles/ListUser.Styled';
 
 const Vender = () => {
 
   const dispatch = useDispatch();
   const { products } = useSelector(state => state.products)
 
-  const [error, setError] = useState(false)
-  const [editForm, setEditForm] = useState(false)
-
-  const [values, handleInputChange, reset, setValues] = useForm({
+  const [values, handleInputChange, reset] = useForm({
     producto: '',
     talla: '',
     precio: '',
@@ -40,28 +37,11 @@ const Vender = () => {
       .catch(error => {
         console.log(error.message);
       })
-
   }
 
   useEffect(() => {
-    dispatch(listProduct())
+    dispatch(listProduct())  // eslint-disable-next-line
   }, [])
-
-  const handleEdit = (products) => {
-    dispatch(editProduct(products.codigo, products))
-    setEditForm(true)
-    setValues({
-      ...products
-    })
-
-  }
-
-  const handleSave = (products, codigo) => {
-    dispatch(editProduct(products.codigo, values, codigo))
-    reset()
-    setEditForm(false)
-
-  }
 
   return (
     <div className="container mt-5 mb-5">
@@ -71,24 +51,27 @@ const Vender = () => {
         <div className="col-8">
           <h3 className="text-center mt-5">Lista de productos a Vender</h3><br />
           {
+            // style="max-width: 540px;"
             products.map((data, index) => (
-              <div className="card mb-5" style={{ width: "18rem" }} key={index}>
-                <img src={data.img} alt={data.producto} />
-                <img src={data.img} style={{ width: "40px", height: '40px' }} className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">{data.producto}</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">Talla: {data.talla}</h6>
-                  <h6 className="card-subtitle mb-2 text-muted">Referencia: #{data.codigo}</h6>
-                  <p>Precio: ${data.precio}</p>
-                  <p className="card-text">Descripción: {data.descripcion}.</p>
-                  <ButtonDele
-                    onClick={() => dispatch(deleteProduct(data.codigo))}>
-                    Eliminar
-                  </ButtonDele>
-                  <ButtonEdit
-                    onClick={() => handleEdit(data)}
-                  >Editar
-                  </ButtonEdit>
+              <div className="card mb-3 max-width: 540px"  key={index}>
+                <div className="row g-0">
+                  <div className="col-md-4">
+                    <img src={data.img} className="img-fluid rounded-start" alt="..." />
+                  </div>
+                  <div className="col-md-8">
+                    <div className="card-body">
+                      <h5 className="card-title">{data.producto}</h5>
+                      <p className="card-text">Talla: {data.talla}.</p>
+                      <p className="card-text">Precio: ${data.precio}.</p>
+                      <p className="card-text">Referencia: #{data.codigo}.</p>
+                      <p className="card-text">Descripción: {data.descripcion}.</p>
+                      <p className="card-text"><small className="text-muted">3 mins ago</small></p>
+                    </div>
+                    <ButtonDele
+                      onClick={() => dispatch(deleteProduct(data.codigo))}>
+                      Eliminar
+                    </ButtonDele>
+                  </div>
                 </div>
               </div>
             ))
@@ -96,14 +79,8 @@ const Vender = () => {
 
         </div>
         <div className="col-4">
-          <h3 className="text-center mt-5">Agrega todos los productos que quieras Vender</h3>
+          <h3 className="text-center mt-5">Agrega todos los productos que quieras Vender</h3><br />
           <p>** Las imágenes deben ser de menos de 16 KB para poder visualizarse correctamente.</p><br />
-          {
-            error &&
-            <div class="alert alert-danger" role="alert">
-              Los campos son obligatorios
-            </div>
-          }
 
           <form className="form-group" onSubmit={handleSubmit}>
             <input
@@ -113,6 +90,7 @@ const Vender = () => {
               placeholder="Nombre del producto"
               value={producto}
               onChange={handleInputChange}
+              required={true}
             />
             <input
               type="text"
@@ -121,7 +99,7 @@ const Vender = () => {
               placeholder="Talla"
               value={talla}
               onChange={handleInputChange}
-
+              required={true}
             />
             <input
               type="text"
@@ -130,12 +108,7 @@ const Vender = () => {
               placeholder="Precio"
               value={precio}
               onChange={handleInputChange}
-            />
-            <input
-              type="file"
-              name="imagen"
-              className="form-control"
-              onChange={handleFile}
+              required={true}
             />
             <input
               type="text"
@@ -144,6 +117,7 @@ const Vender = () => {
               placeholder='Valor númerico como referencia.'
               value={codigo}
               onChange={handleInputChange}
+              required={true}
             />
             <textarea
               name="descripcion"
@@ -152,25 +126,21 @@ const Vender = () => {
               placeholder='Menciona las características de tu producto.'
               value={descripcion}
               onChange={handleInputChange}
+              required={true}
             >
             </textarea>
+            <input
+              type="file"
+              name="imagen"
+              className="form-control"
+              onChange={handleFile}
+            /><br />
             <div className="d-grid gap-2 mx-auto ">
-              {
-                !editForm ?
-                  <button
-                    className="btn btn-info"
-                    type="submit" >
-                    Enviar
-                  </button>
-                  :
-                  <button
-                    className='btn btn-warning'
-                    type='submit'
-                    onClick={handleSave}>
-                    Guardar
-                  </button>
-              }
-
+              <button
+                className="btn btn-info"
+                type="submit" >
+                Enviar
+              </button>
             </div>
           </form>
         </div>

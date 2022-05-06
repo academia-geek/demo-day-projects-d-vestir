@@ -10,6 +10,8 @@ export const ProductDiv = styled.div`
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     border-radius: 5px;
     object-fit: cover;
+    background-color:white;
+
 
     &:hover {
         transform:scale(0.98);
