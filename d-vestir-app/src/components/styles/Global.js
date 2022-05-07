@@ -17,6 +17,7 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         font-size:1rem;
         font-family: 'Oxygen', sans-serif;
+        scroll-behavior: smooth;
     }
 
     body {
@@ -70,6 +71,16 @@ export const theme = {
     btn: {
         color:'#7c73e6',
         background:'#c4c1e0'
+    },
+
+    paleta: {
+        green1:'#156064',
+        green2:'#00C49A',
+        green3:'#00D8AA',
+        yellow:'#F8E16C',
+        pink:'#FFC2B4',
+        pink2:'#fff8f0',
+        orange:'#FB8F67'
     }
 
 }

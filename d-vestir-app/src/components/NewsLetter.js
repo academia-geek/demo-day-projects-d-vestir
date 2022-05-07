@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import { DivForm, MsgError, MsgSuccess, Enviar, Reset } from './styles/NewsLetter.Styled';
+import { DivForm, MsgError, MsgSuccess } from './styles/NewsLetter.Styled';
+import { ButtonNews } from './principal/Principal.Styled'
 
 const NewsLetter = () => {
     const [sendEmail, setSendEmail] = useState(false);
@@ -27,8 +28,8 @@ const NewsLetter = () => {
     return (
         <DivForm>
             <form onSubmit={formik.handleSubmit}>
-                <h2>NewsLetter</h2>
                 <h3>¿Quieres estar al tanto de las últimas novedades?</h3>
+                <p>Semanalmente enviamos correos informativos.</p>
                 <label htmlFor='email'></label>
                 <input
                     id='email'
@@ -41,8 +42,8 @@ const NewsLetter = () => {
 
                 />
                 <div>
-                    <Enviar type='submit' disabled={!formik.isValid || !formik.dirty}>Enviar</Enviar>
-                    <Reset type='reset'>Reset</Reset>
+                    <ButtonNews type='submit' disabled={!formik.isValid || !formik.dirty}>Enviar</ButtonNews>
+                    {/* <Reset type='reset'>Reset</Reset> */}
                 </div>
                 {formik.touched.email && formik.errors.email ? <MsgError>{formik.errors.email}</MsgError> : null}
                 {sendEmail && <MsgSuccess>E-mail enviado con éxito!</MsgSuccess>}

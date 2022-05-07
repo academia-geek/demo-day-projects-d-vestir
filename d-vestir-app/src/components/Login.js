@@ -107,13 +107,13 @@ function Login() {
                         <BtnCrear>Crea tu cuenta</BtnCrear>
                     </Link>
                     <br />
-                    <p>Al continuar, aceptas las Condiciones de uso y el Aviso de privacidad de d-vestir.</p>
+                    <p>Al continuar, aceptas las condiciones de uso y el aviso de privacidad de Vestir.</p>
                     <ul>
                         <li>Condiciones de uso</li>
                         <li>Aviso de privacidad</li>
                         <li>Ayuda</li>
                     </ul>
-                    <p>© d-vestir.com, Inc</p>
+                    <p>© Vestir.com, Inc</p>
                 </Form>
             </DivStyled>
         </>

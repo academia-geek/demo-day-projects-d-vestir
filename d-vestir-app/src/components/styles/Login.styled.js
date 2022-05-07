@@ -7,12 +7,13 @@ export const DivStyled = styled.div`
     justify-content:center;
     place-items:center;
     padding:2rem 0;
-
+    
     h2 {
         padding-bottom: 2rem;
     }
     
     form {
+        background-color:white;
         border: 1px solid ${({ theme }) => theme.colors.border};
         border-radius: 10px;
         padding: 2rem 1rem;

@@ -22,6 +22,7 @@ export const DivForm = styled.section`
         padding-bottom:5rem;
         box-shadow: ${({ theme }) => theme.colors.shadow};
         background-color:white;
+
     }
 
     input {
@@ -36,6 +37,8 @@ export const DivForm = styled.section`
             outline:none;
         }
     }
+     
+   
 
 `
 
@@ -62,9 +65,7 @@ export const Enviar = styled.button`
     border-radius: 10px;
     cursor: pointer;
 
-    &:hover {
-        transform:scale(0.98);
-    }
+   
 `
 export const Reset = styled(Enviar)`
     background-color:#f95959;

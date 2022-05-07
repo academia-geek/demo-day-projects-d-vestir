@@ -1,11 +1,12 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTwitter, FaPhoneAlt } from 'react-icons/fa'
+import { MdEmail, MdLocationOn } from 'react-icons/md'
 import { Container, Flex } from '../components/styles/Container.Styled'
 import { StyledFooter, StyledIcons } from './styles/Footer.Styled'
 
 const Footer = () => {
     return (
-        <StyledFooter>
+        <StyledFooter id='footer'>
             <Container>
                 <img src='' alt='' />
                 <Flex>
@@ -17,9 +18,21 @@ const Footer = () => {
                         </li>
                     </ul>
                     <ul>
-                        <li>Teléfono: 555 555 555</li>
-                        <li>contacto@dvestir.com</li>
-                        <li>Cll 56 a N 80 Oeste</li>
+                        <li>
+                            <span>
+                                <FaPhoneAlt /> - 555 555 555
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <MdEmail /> - contacto@vestir.com
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <MdLocationOn /> - Cll 56 a N 80 Oeste
+                            </span>
+                        </li>
                     </ul>
                     <ul>
                         <li>Sobre nosotros</li>

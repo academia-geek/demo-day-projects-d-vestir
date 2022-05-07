@@ -6,9 +6,8 @@ export const Nav = styled.nav`
   width: 100%;
   justify-content: right;
   align-items: center;
-  background: #00c49a;
+  background: ${({theme}) => theme.paleta.green2};
   padding: 1.2rem;
-  position: sticky;
   top: 0;
   left: 0;
   gap: 1rem;

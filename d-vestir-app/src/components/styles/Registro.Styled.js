@@ -22,8 +22,7 @@ export const DivStyledRegistro = styled.div`
         text-align: center;
         word-wrap: wrap;
         box-shadow: ${({theme}) => theme.colors.shadow};
-
-
+        background-color:white;
 
         img {
             margin-bottom: 2rem;
