@@ -8,7 +8,7 @@ export const StyledFooter = styled.footer`
 
     ul {
         list-style:none;
-       
+        margin-top:1rem;
     }
 
     ul li {
@@ -17,7 +17,7 @@ export const StyledFooter = styled.footer`
     }
 
     p {
-        text-align:right;
+        text-align:left;
     }
 `
 export const StyledIcons = styled.div`

@@ -22,7 +22,7 @@ export const DivStyled = styled.div`
         align-items:center;
         text-align: center;
         word-wrap: wrap;
-        box-shadow: ${({theme}) => theme.colors.shadow};
+        box-shadow: ${({ theme }) => theme.colors.shadow};
 
 
         img {
@@ -53,7 +53,7 @@ export const DivStyled = styled.div`
             width: 300px;
             height: 40px;
             margin: 0;
-            border: 1px solid ${({theme}) => theme.colors.border};
+            border: 1px solid ${({ theme }) => theme.colors.border};
             border-radius:5px;
         }
 
@@ -86,5 +86,5 @@ export const BtnFacebook = styled(BtnGoogle)`
 
 export const BtnCrear = styled(BtnFacebook)`
     background-color: ${({ theme }) => theme.btn.background};
-    color: ${({theme})  => theme.btn.color};
+    color: ${({ theme }) => theme.btn.color};
 `

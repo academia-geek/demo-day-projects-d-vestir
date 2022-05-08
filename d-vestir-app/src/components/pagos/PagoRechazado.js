@@ -15,8 +15,8 @@ const PagoRechazado = () => {
         <h1>Lo sentimos, su pago ha sido rechazado.</h1>
         <p>Lo invitamos a validar con su entidad bancaria.
           Si tiene alguna duda adicional, no dude en contactarnos<br />
-          <a href='mailto:contacto@dvestir.com'>
-            contacto@dvestir.com
+          <a href='mailto:contacto@vestir.com'>
+            contacto@vestir.com
           </a>
         </p>
         <Link to='/products'>

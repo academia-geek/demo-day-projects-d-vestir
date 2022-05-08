@@ -6,7 +6,7 @@ export const DivStyledRegistro = styled.div`
     align-items:center;
     justify-content:center;
     place-items:center;
-
+    padding:2rem 0;
      
     h2 {
         padding-bottom: 2rem;
@@ -15,7 +15,7 @@ export const DivStyledRegistro = styled.div`
     form {
         border: 1px solid #AAB8C2;
         border-radius: 10px;
-        padding: 1rem 1rem;
+        padding: 2rem 1rem;
         display: flex;
         flex-direction: column;
         align-items:center;

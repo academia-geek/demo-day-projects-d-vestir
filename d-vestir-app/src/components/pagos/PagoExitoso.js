@@ -14,8 +14,8 @@ const PagoExitoso = () => {
         </i>
         <h2>Su pago ha sido exitoso, gracias por su compra.</h2>
         <p>Si tiene alguna duda no dude en contactarnos<br />
-          <a href='mailto:contacto@dvestir.com'>
-            contacto@dvestir.com
+          <a href='mailto:contacto@vestir.com'>
+            contacto@vestir.com
           </a>
         </p>
         <Link to='/products'>

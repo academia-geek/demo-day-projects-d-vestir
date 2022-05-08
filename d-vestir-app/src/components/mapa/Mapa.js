@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Map, { Marker, Popup, NavigationControl, FullscreenControl, GeolocateControl } from 'react-map-gl'
-import { DivInput, DivMap, Input, Logo, Ptag, Title, StyledMap } from './Mapa.Styled'
+import { DivMap, Logo, Ptag, Title, StyledMap } from './Mapa.Styled'
 
 const MAP_KEY = 'pk.eyJ1IjoiYW5kcmVzbHYiLCJhIjoiY2wyajcwd3dnMDFibTNqbWs4NGtoOHI2dSJ9.qhpE3jLPqJyCTFIxHgCZGA'
 
 const Mapa = () => {
 
   return (
-
     <>
       <StyledMap>
         <Map
@@ -34,7 +33,7 @@ const Mapa = () => {
             latitude={4.590}
           >
             <div >
-              <Logo src='/mapbox-icon.png' />
+              <Logo src='/images/logo2.png' />
               <Ptag>📌</Ptag>
             </div>
           </Marker>
@@ -49,11 +48,11 @@ const Mapa = () => {
             openOnClick={true}
           >
             <DivMap>
+              <Logo src='/images/logo1.png' />
               <Title>Aquí está ubicada nuestra tienda física.</Title>
-              <p>Calle 34 N 56a Oeste.</p>
+              <p>Cll 56 a N 80 Oeste.</p>
               <p>Teléfono: 555 555 555</p>
             </DivMap>
-
           </Popup>
 
           <FullscreenControl />
@@ -65,15 +64,7 @@ const Mapa = () => {
             }}
             trackUserLocation={true}
           />
-
         </Map>
-
-        {/* <DivInput>
-        <input
-          type='text'
-          placeholder='Buscar'
-        />
-      </DivInput> */}
       </StyledMap>
     </>
   )

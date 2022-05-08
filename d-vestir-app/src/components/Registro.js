@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { registroEmailPasswordNombre } from '../actions/actionRegister';
 import { DivStyledRegistro } from './styles/Registro.Styled';
 import { BtnCrear } from './styles/Login.styled';
-
+import { Logo2 } from './logo/Logo.Styled'
 
 export const Registro = () => {
 
@@ -31,7 +31,7 @@ export const Registro = () => {
             <DivStyledRegistro>
                 <Form onSubmit={handleRegistro}>
                     <Link to='/landing'>
-                        <img src='/images/logo-amazon.png' alt='' />
+                        <Logo2 src='/images/logo1.png' alt='' />
                     </Link>
                     <h2>Registro</h2>
                     <Form.Group className="mb-3" controlId="formBasicName">
@@ -69,7 +69,6 @@ export const Registro = () => {
                             required={true}
                         />
                     </Form.Group>
-
                     <Form.Group className="mb-3" controlId="formBasicRepitPassword">
                         <Form.Label></Form.Label>
                         <Form.Control
@@ -82,16 +81,12 @@ export const Registro = () => {
 
                         />
                     </Form.Group>
-
-
                     <Button variant="secondary" type="submit">
                         Registrarse
                     </Button>
-
                     <Link to="/Login">
                         <BtnCrear>Login</BtnCrear>
                     </Link>
-
                 </Form>
             </DivStyledRegistro>
         </div>

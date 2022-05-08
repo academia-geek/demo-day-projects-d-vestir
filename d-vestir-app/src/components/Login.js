@@ -7,6 +7,7 @@ import { loginEmailPassword, loginGoogle, loginFacebook } from '../actions/actio
 
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { BtnCrear, BtnFacebook, BtnGoogle, DivStyled } from './styles/Login.styled';
+import { Logo2 } from './logo/Logo.Styled'
 
 function Login() {
 
@@ -48,7 +49,7 @@ function Login() {
             <DivStyled>
                 <Form onSubmit={handleLogin}>
                     <Link to='/landing'>
-                        <img src='' alt='' />
+                        <Logo2 src='/images/logo1.png' alt=''/>
                     </Link>
                     <h2>Iniciar sesión</h2>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

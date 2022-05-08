@@ -84,4 +84,5 @@ export const Button = styled.button`
 `
 export const ButtonNews = styled(Button)`
     width:400px;
+    margin-top:5px;
 `

@@ -19,7 +19,7 @@ export const Nav = styled.nav`
     text-transform: uppercase;
     letter-spacing:2px;
   }
-  
+
 `
 
 export const Counter = styled.div`

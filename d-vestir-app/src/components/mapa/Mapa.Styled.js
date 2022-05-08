@@ -9,9 +9,7 @@ export const DivMap = styled.div`
 `
 export const Logo = styled.img`
     cursor:pointer;
-    border-radius:50%;
-    width:50px;
-    height:50px;
+    width:130px;
 `
 export const Ptag = styled.p`
     @keyframes bounce {

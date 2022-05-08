@@ -3,18 +3,21 @@ import { FaFacebook, FaInstagram, FaTwitter, FaPhoneAlt } from 'react-icons/fa'
 import { MdEmail, MdLocationOn } from 'react-icons/md'
 import { Container, Flex } from '../components/styles/Container.Styled'
 import { StyledFooter, StyledIcons } from './styles/Footer.Styled'
+import { Logo } from './logo/Logo.Styled'
 
 const Footer = () => {
     return (
         <StyledFooter id='footer'>
             <Container>
-                <img src='' alt='' />
+                <a href='#header'>
+                    <Logo src='/images/logo2.png' alt='' />
+                </a>
                 <Flex>
                     <ul>
                         <li>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                             Aspernatur cupiditate saepe molestiae autem modi, accusamus dolore numquam rem minus
-                            quidem fuga nisi velit sint? Inventore eligendi labore et eum. Iure?
+                            quidem fuga nisiIure?
                         </li>
                     </ul>
                     <ul>

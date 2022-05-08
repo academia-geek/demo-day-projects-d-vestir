@@ -14,8 +14,8 @@ const Seguimiento = () => {
                     </i>
                     <h2>A continuación podrá hacerle segumiento a su pedido.</h2>
                     <p>Si tiene alguna duda no dude en contactarnos<br />
-                        <a href='mailto:contacto@dvestir.com'>
-                            contacto@dvestir.com
+                        <a href='mailto:contacto@vestir.com'>
+                            contacto@vestir.com
                         </a>
                     </p>
                     <Link to='/products'>

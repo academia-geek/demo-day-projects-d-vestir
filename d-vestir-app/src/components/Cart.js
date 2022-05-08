@@ -74,8 +74,8 @@ const Cart = ({ cart }) => {
                 </Price>
 
                 <StripeCheckout
-                    name='D-vestir'
-                    image='https://depor.com/resizer/T5OUcVy_sGB6W7Qoi4MmZzzjmso=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/TXFX733REBAO7IPVSSOBNS3UJU.JPG'
+                    name='Vestir'
+                    image='/images/logo2.png'
                     billingAddress
                     shippingAddress
                     description={`El total es ${totalPrice}`}
