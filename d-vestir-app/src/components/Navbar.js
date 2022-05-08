@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux';
 import { FiShoppingCart } from 'react-icons/fi'
 import { useNavigate } from 'react-router-dom';
+import { BsPersonCircle } from 'react-icons/bs'
 
 import { logout } from '../actions/actionLogin';
-import { Nav, Counter, DivCart, NavLink } from './styles/Navbar.Styled';
+import { Nav, Counter, DivCart, NavLink, Icon } from './styles/Navbar.Styled';
 import { ButtonDele } from './styles/ListUser.Styled';
 
 const Navbar = ({ cart }) => {
@@ -42,8 +43,13 @@ const Navbar = ({ cart }) => {
                 <NavLink to='/donar'>
                     <h3>Donar</h3>
                 </NavLink>
+                <NavLink to='/canjear'>
+                    <h3>Canjear</h3>
+                </NavLink>
                 <NavLink to='/contenido'>
-                    <h3>Perfil</h3>
+                    <Icon>
+                        <BsPersonCircle size={'2em'} />
+                    </Icon>
                 </NavLink>
                 <NavLink to='/cart'>
                     <DivCart>

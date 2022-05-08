@@ -5,15 +5,20 @@ export const StyledCard = styled.div`
     align-itmes:center;
     background-color:white;
     border-radius:5px;
-    margin: 40px 100px;
+    margin: 40px 110px;
     padding: 60px 60px;
     box-shadow:${({ theme }) => theme.colors.shadow};
     flex-direction: ${({ reverse }) => reverse || 'row'};
     text-align:left;
+    object-fit:cover;
+    justify-content:space-around;
 
     img {
-        width:90%;
-
+        // width:85%;
+        width: 350px;
+        height:350px;
+        object-fit:cover;
+        
         &:hover {
             opacity:0.5;
         }
@@ -22,6 +27,8 @@ export const StyledCard = styled.div`
      & > div {
          flex:1;
          gap:5px;
+         object-fit:cover;
+         margin: 0 3rem;
      }
 
      h2 {

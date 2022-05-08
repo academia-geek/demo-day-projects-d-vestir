@@ -36,8 +36,12 @@ export const Nav = styled.nav`
     justify-content: space-between;
     letter-spacing:2px;
     top:0;
-left:0;
-position:sticky;
+    left:0;
+    position:sticky;
+
+    img {
+        margin-bottom:10px;
+    }
 `
 
 export const StyledLink = styled(Link)`

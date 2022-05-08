@@ -5,6 +5,7 @@ export const StyledDiv = styled.div`
     align-items:center;
     text-align:center;
     justify-content:center;
+    margin:0 auto;
 
     p {
         padding: 5px 150px;

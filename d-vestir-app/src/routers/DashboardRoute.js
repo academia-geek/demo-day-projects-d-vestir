@@ -12,12 +12,13 @@ import Contenido from '../components/Contenido'
 import Vender from '../components/Vender';
 import Donacion from '../components/donacion/Donacion';
 import Navbar from '../components/Navbar'
+import Intercambio from '../components/intercambio/Intercambio';
 
 const DashboardRoute = ({ currentItem }) => {
   return (
 
     <>
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Products />} />
         <Route path="/products" element={<Products />} />
@@ -34,6 +35,7 @@ const DashboardRoute = ({ currentItem }) => {
         <Route path='/contenido' element={<Contenido />} />
         <Route path='/vender' element={<Vender />} />
         <Route path='/donar' element={<Donacion />} />
+        <Route path='/canjear' element={<Intercambio />} />
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>
     </>

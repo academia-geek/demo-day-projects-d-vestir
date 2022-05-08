@@ -5,10 +5,12 @@ import { StyledDiv } from './Donacion.Styled'
 const Donacion = () => {
     return (
         <StyledDiv>
-            <h2>¿Quieres donar o quieres recbir una donación?</h2>
-            <p>Es muy fácil, seleciona en la parte de abajao una fecha y hora para que
-                puedeas dirigirte a las instalaciones a realizar el proceso, una vez allí entregas tu donación o escoges lo que te gusta. Así de fácil.
-                 Nuestros procesos son directos, sin intermidiarios.</p>
+            <h2>¿Quiere donar o ser beneficiario de ella?</h2>
+            <hr/><br/>
+            <p>Es muy fácil, selecione en la parte inferior una fecha y hora para agendar una cita y con esto
+                puedrá dirigirse a las instalaciones a realizar el proceso, una vez allí entrega la donación o escoge lo que le gusta (Mínimo 3 prendas por persona ). Así de fácil.
+                Nuestros procesos son directos, sin intermediarios.</p>
+
             <InlineWidget
                 url='https://calendly.com/Dvestir'
                 styles={{
