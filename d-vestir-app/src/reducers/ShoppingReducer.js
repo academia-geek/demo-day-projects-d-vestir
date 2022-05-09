@@ -8,9 +8,10 @@ const initialState = {
       genero: 'Unisex',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 79080.0,
+      price: 40000,
+      original: 79080,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924773/Shopping_cart/ns-37rVmK3jY-c-unsplash_dwl0pm.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F1.jpg?alt=media&token=f98a6208-98c9-4698-a1bc-da369e928178",
     },
     {
       id: 2,
@@ -18,9 +19,10 @@ const initialState = {
       genero: 'Mujer',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 12000.0,
+      price: 78600,
+      original: 120000,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924781/Shopping_cart/alina-levkovich-vao35_bkgFc-unsplash_fnfkpg.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F2.jpg?alt=media&token=94aae90a-462d-48a8-bff5-48c390fc88ee",
     },
     {
       id: 3,
@@ -28,9 +30,10 @@ const initialState = {
       genero: 'Mujer',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 15000.0,
+      price: 25900,
+      original: 80000,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924780/Shopping_cart/marlon-alves-fTw4sPi6YKc-unsplash_ne2l9a.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F3.jpg?alt=media&token=042203d1-3617-4c24-a25b-7adc6403453a",
     },
     {
       id: 4,
@@ -38,19 +41,21 @@ const initialState = {
       genero: 'Mujer',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 119000.0,
+      price: 20000,
+      original: 119000,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924780/Shopping_cart/brian-lawson-Z9tGkCotYHs-unsplash_rz9emu.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F4.jpg?alt=media&token=ad1fafee-070a-4be0-80a7-f05a5384559b",
     },
     {
       id: 5,
-      title: "Jean y Sweater ",
+      title: "Jean, Sweater y botines.",
       genero: 'Mujer',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 350000.0,
+      price: 150000,
+      original: 349900,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924779/Shopping_cart/heather-ford-5gkYsrH_ebY-unsplash_sanzva.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F5.jpg?alt=media&token=46e746e5-6594-4600-8f82-194597681821",
     },
     {
       id: 6,
@@ -58,9 +63,10 @@ const initialState = {
       genero: 'Mujer',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 45900.0,
+      price: 120000,
+      original: 259000,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924780/Shopping_cart/bernadett-grega-y69xP87X26U-unsplash_ai76ma.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F6.jpg?alt=media&token=6ae13adc-d971-411f-8ebf-33b1f8a99532",
     },
     {
       id: 7,
@@ -68,9 +74,10 @@ const initialState = {
       genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 15000.0,
+      price: 16000,
+      original: 45000,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924777/Shopping_cart/bao-bao-TysFvOl78u0-unsplash_fmuaho.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F7.jpg?alt=media&token=3be7df4e-076a-4200-ba01-d303ef8ad24f",
     },
     {
       id: 8,
@@ -78,9 +85,10 @@ const initialState = {
       genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 129000.0,
+      price: 40000,
+      original: 129000,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924777/Shopping_cart/jeremy-alford-mx1OV1nlFI0-unsplash_x75gkz.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F8.jpg?alt=media&token=d2db8352-56b6-43e8-8ffd-d3857664e405",
     },
     {
       id: 9,
@@ -88,9 +96,10 @@ const initialState = {
       genero: 'Mujer',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 180000.0,
+      price: 76900,
+      original: 180000,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924777/Shopping_cart/laura-chouette-q7dkbaeyjUE-unsplash_dvepti.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F9.jpg?alt=media&token=db83bee4-963d-4dd9-9e55-1a811f214099",
     },
     {
       id: 10,
@@ -98,9 +107,10 @@ const initialState = {
       genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 87000.0,
+      price: 23500,
+      original: 87000,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924776/Shopping_cart/lizzy-jenkins-Ski5jkhduAY-unsplash_lvvub8.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F10.jpg?alt=media&token=ba627b6b-2f23-47e9-b770-078976155faa",
     },
     {
       id: 11,
@@ -108,9 +118,10 @@ const initialState = {
       genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 149999.0,
+      price: 94800,
+      original: 199999,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924771/Shopping_cart/caio-coelho-QRN47la37gw-unsplash_mfincb.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F11.jpg?alt=media&token=6ebd0319-adab-48de-8b6a-7a3944436be2",
     },
     {
       id: 12,
@@ -118,9 +129,10 @@ const initialState = {
       genero: 'Mujer',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 169899.0,
+      price: 79000,
+      original: 169899,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924774/Shopping_cart/sarah-dorweiler-gUPiTDBdRe4-unsplash_gqtmhc.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F12.jpg?alt=media&token=695825be-eb57-4c04-82ed-c3c3097caf99",
     },
     {
       id: 13,
@@ -128,9 +140,10 @@ const initialState = {
       genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 1137099.0,
+      price: 68900,
+      original: 153709,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924774/Shopping_cart/creaslim-SrqCf0SBaS8-unsplash_v3cr7w.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F13.jpg?alt=media&token=f7046e9e-84e4-4c78-8f07-a0c2c556615b",
     },
     {
       id: 14,
@@ -138,29 +151,32 @@ const initialState = {
       genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 69099.0,
+      price: 47000,
+      original: 148500,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924773/Shopping_cart/md-salman-tWOz2_EK5EQ-unsplash_mgorpb.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F14.jpg?alt=media&token=ae21761d-255a-4939-b130-d970929c497a",
     },
     {
-      id: 16,
+      id: 15,
       title: "Jeans skinny básicos.",
       genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 89990.0,
+      price: 89990,
+      original: 259990,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924773/Shopping_cart/maude-frederique-lavoie-EDSTj4kCUcw-unsplash_blmzaw.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F15.jpg?alt=media&token=4a365a1c-6cbe-45da-b157-84372674db72",
     },
     {
-      id: 17,
+      id: 16,
       title: "Sweater.",
       genero: 'Mujer',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 90000.0,
+      price: 60000,
+      original: 190000,
       image:
-        "https://res.cloudinary.com/dxu01bvpk/image/upload/v1650924803/Shopping_cart/mediamodifier-7cERndkOyDw-unsplash_q1rsga.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Shopping_cart%2F16.jpg?alt=media&token=3a237792-20d0-42ce-b310-7a3b9318582f",
     },
   ],
   cart: [],

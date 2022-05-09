@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { addToCart, loadCurrentItem } from '../actions/shoppingActions';
 
-import { ProductDiv, Details, Title, Description, Price, Add, Options } from './styles/Product.Styled';
-// import { BsSearch } from 'react-icons/bs'
+import { ProductDiv, Details, Title, Description, Price, Add, Options, Original } from './styles/Product.Styled';
 
 const Product = ({ productData, addToCart, loadCurrentItem }) => {
-    
+
     return (
         <>
             <ProductDiv>
@@ -25,18 +24,14 @@ const Product = ({ productData, addToCart, loadCurrentItem }) => {
                     <Details >
                         <Title >{productData.title}</Title>
                         <Description >{productData.genero}</Description>
-                        <Price >$ {productData.price} COP.</Price>
+                        <Price >Real: ${productData.price.toLocaleString('es-CO')}</Price>
+                        <Original>Original: ${productData.original.toLocaleString('es-CO')}</Original>
                     </Details>
 
                     <Options>
-                        {/* <Link to={`/product/${productData.id}`}>
-                        <View onClick={() => loadCurrentItem(productData)}>
-                            <BsSearch size={'1.5em'}/>
-                        </View>
-                    </Link> */}
-                        <Add onClick={() => addToCart(productData.id) 
-                        } 
-                            >
+                        <Add onClick={() => addToCart(productData.id)
+                        }
+                        >
                             Añadir
                         </Add>
                     </Options>

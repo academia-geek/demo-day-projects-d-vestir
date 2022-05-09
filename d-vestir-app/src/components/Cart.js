@@ -68,17 +68,17 @@ const Cart = ({ cart }) => {
                 <h3>Orden de compra</h3>
                 <Price>
                     <p>Cantidad Unidades ({totalItems})</p>
-                    <p>Subtotal: ${(totalPrice.toFixed(2)) / (1,1)} </p>
+                    <p>Subtotal: ${(totalPrice.toFixed(2)) / (1, 1)} </p>
                     <p>Gastos de envío: $ 0.0</p>
-                    <Price>Total a pagar: ${totalPrice}</Price>
+                    <Price>Total a pagar: ${totalPrice.toLocaleString('es-CO')}</Price>
                 </Price>
 
                 <StripeCheckout
-                    name='Vestir'
-                    image='/images/logo2.png'
+                    name='VESTIR'
+                    image='/images/favicon-16x16.png'
                     billingAddress
                     shippingAddress
-                    description={`El total es ${totalPrice}`}
+                    description={`El total es ${totalPrice.toLocaleString('es-CO')}`}
                     amount={totalPrice * 100}
                     currency='COP'
                     locale='es'
@@ -86,10 +86,10 @@ const Cart = ({ cart }) => {
                     stripeKey={KEY}
                     allowRememberMe
                     closed={() => navigate('/exitoso')}
-                    // email='contacto@dvestir.com'
+                // email='contacto@dvestir.com'
                 >
                     <Button>
-                        Comprar ${totalPrice}
+                        Comprar ${totalPrice.toLocaleString('es-CO')}
                     </Button>
                 </StripeCheckout>
             </Content>

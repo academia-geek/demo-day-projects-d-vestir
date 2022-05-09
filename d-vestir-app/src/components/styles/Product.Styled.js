@@ -65,7 +65,7 @@ export const View = styled.button`
     background-color: ${({ theme }) => theme.search.background};
 
 `
-export const Add =  styled.button`
+export const Add = styled.button`
     width: 100px;
     padding: 1rem;
     color: ${({ theme }) => theme.success.color};
@@ -78,4 +78,8 @@ export const Add =  styled.button`
 export const Options = styled.div`
     display:flex;
     justify-content:space-between;
+`
+export const Original = styled.p`
+    text-decoration:line-through red;
+    font-style: italic;
 `

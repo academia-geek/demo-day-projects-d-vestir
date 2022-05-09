@@ -32,10 +32,10 @@ const Intercambio = () => {
       size={300}
       value={url}
       bgColor='white'
-      fgColor='#00C49A'
+      fgColor='#313552'
       level='Q'
       imageSettings={{
-        src: '/images/logo1.png',
+        src: '/images/favicon3.png',
         excavate: true,
         width: 300 * 0.1,
         height: 300 * 0.1,
