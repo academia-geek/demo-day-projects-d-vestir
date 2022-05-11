@@ -6,5 +6,5 @@ export const StyledSpinner = styled.div`
     justify-content:center;
     width:100%;
     height: 100vh;
-    background-color:#fff8f0;
+    background-color:${({theme}) => theme.paleta.blue};
 `

@@ -41,7 +41,7 @@ const Navbar = ({ cart }) => {
                     <h3>Vender</h3>
                 </NavLink>
                 <NavLink to='/donar'>
-                    <h3>Donar</h3>
+                    <h3>Donar o Recibir</h3>
                 </NavLink>
                 <NavLink to='/canjear'>
                     <h3>Canjear</h3>

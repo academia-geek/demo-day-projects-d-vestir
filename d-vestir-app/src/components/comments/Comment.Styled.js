@@ -5,7 +5,7 @@ export const StyledComment = styled.div`
     align-items:center;
     text-align: left;
     place-items: center;
-    background-color: ${({theme}) => theme.paleta.pink2};
+    background-color: ${({theme}) => theme.paleta.blue};
     padding: 5rem 5rem;
     font-size: 14px;
     gap: 3rem;

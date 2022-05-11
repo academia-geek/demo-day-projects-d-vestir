@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
         align-items:center;
         place-items:center;
         display:flex;
-        background-color:#fff8f0;
+        background-color:${({theme}) => theme.paleta.blue};
     }
 
     button {
@@ -80,7 +80,8 @@ export const theme = {
         yellow:'#F8E16C',
         pink:'#FFC2B4',
         pink2:'#fff8f0',
-        orange:'#FB8F67'
+        orange:'#FB8F67',
+        blue:'#E5E9F2'
     }
 
 }
