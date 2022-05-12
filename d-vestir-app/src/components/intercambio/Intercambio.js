@@ -3,6 +3,7 @@ import QRCode from 'qrcode.react'
 import { StyledDiv } from '../donacion/Donacion.Styled'
 import { ContainerCode, Form } from './Intercambio.Styled'
 import { ButtonNews } from '../principal/Principal.Styled'
+import CanjearNavbar from './CanjearNavbar'
 
 const Intercambio = () => {
 
@@ -44,30 +45,37 @@ const Intercambio = () => {
   )
 
   return (
-    <StyledDiv>
-      <div>
+    <>
+      <CanjearNavbar />
+
+      <StyledDiv>
         <div>
-          <h2>¿Tiene prendas en buen estado que desee intercambiar?</h2>
-          <hr /><br />
-          <p>Si es así, lo que debe hacer es escrbir de forma detallada
-            las prendas que tiene y con cuales le gustaría intercambiar,
-            posterior generar un código QR y descargarlo, con éste podrá acercarce a las
-            instalaciones una vez se confirme la disponibilidad del producto y poder hacer el canje.</p>
+          <div>
+            <h2>¿Tiene prendas en buen estado que desee intercambiar?</h2>
+            <hr /><br />
+            <p>Si es así, lo que debe hacer es escrbir de forma detallada
+              las prendas que tiene y con cuales le gustaría intercambiar,
+              posterior generar un código QR y descargarlo, con éste podrá acercarce a las
+              instalaciones una vez se confirme la disponibilidad del producto y poder hacer el canje.</p>
+          </div>
+          <ContainerCode>
+            <Form onSubmit={downloadQR}>
+              <textarea
+                type='text'
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+                placeholder='Artículos para intercambiar.'
+              />
+              <ButtonNews type='submit'>Descargar código QR</ButtonNews>
+            </Form>
+            <div ref={qrRef}>{qrCode}</div>
+          </ContainerCode>
         </div>
-        <ContainerCode>
-          <Form onSubmit={downloadQR}>
-            <textarea
-              type='text'
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
-              placeholder='Artículos para intercambiar.'
-            />
-            <ButtonNews type='submit'>Descargar código QR</ButtonNews>
-          </Form>
-          <div ref={qrRef}>{qrCode}</div>
-        </ContainerCode>
-      </div>
-    </StyledDiv >
+      </StyledDiv >
+
+
+
+    </>
   )
 }
 

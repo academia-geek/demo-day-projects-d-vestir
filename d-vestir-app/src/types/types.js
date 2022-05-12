@@ -26,4 +26,9 @@ export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 export const ADJUST_QTY = 'ADJUST_QTY';
 export const LOAD_CURRENT_ITEM = 'LOAD_CURRENT_ITEM';
 
-
+export const typesCanjear = {
+    add_to_cart: 'add_to_cart',
+    remove_from_cart: 'remove_from_cart',
+    adjust_qty:' adjust_qty',
+    load_current_item:'load_current_item'
+}

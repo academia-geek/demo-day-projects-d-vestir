@@ -14,7 +14,14 @@ import Donacion from '../components/donacion/Donacion';
 import Navbar from '../components/Navbar'
 import Intercambio from '../components/intercambio/Intercambio';
 
-const DashboardRoute = ({ currentItem }) => {
+import CanjearCart from '../components/intercambio/CanjearCart';
+import CanjearCartItem from '../components/intercambio/CanjearCartItem';
+
+import CanjearProduct from '../components/intercambio/CanjearProduct';
+import CanjearProducts from '../components/intercambio/CanjearProducts'
+import CanjearSingleItem from '../components/intercambio/CanjearSingleItem';
+
+const DashboardRoute = ({ currentItem, currentItem_canjear }) => {
   return (
 
     <>
@@ -28,6 +35,19 @@ const DashboardRoute = ({ currentItem }) => {
         ) : (
           <Route path="/product/:id" element={<SingleItem />} />
         )}
+
+
+        <Route path="/canjearProducts" element={<CanjearProducts />} />
+        <Route path="/canjearProduct" element={<CanjearProduct />} />
+        <Route path="/canjearCart" element={<CanjearCart />} />
+        {!currentItem_canjear ? (
+          <Route path="/canjearProducts" element={<Navigate to="/canjearProducts" />} />
+        ) : (
+          <Route path="/canjearProduct/:id" element={<CanjearSingleItem />} />
+        )}
+        <Route path="/canjearCarItem" element={<CanjearCartItem/>}/>
+
+        
 
         <Route path='/exitoso' element={<PagoExitoso />} />
         <Route path='/seguimiento' element={<Seguimiento />} />
@@ -44,7 +64,9 @@ const DashboardRoute = ({ currentItem }) => {
 
 const mapStateToProps = state => {
   return {
-    currentItem: state.shop.currentItem
+    currentItem: state.shop.currentItem,
+    currentItem_canjear: state.shop_canjear.currentItem_canjear
+
   }
 }
 

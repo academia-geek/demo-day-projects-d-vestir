@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
 import { connect } from 'react-redux';
-import { removeFromCart, adjustQty } from '../actions/shoppingActions';
-import { Items, Detail, Cantidad } from '../components/styles/CartItem.Styled'
+import { removeFromCart, adjustQty } from '../../actions/actionCanjear';
+import { Items, Detail, Cantidad } from '../../components/styles/CartItem.Styled'
 
 import { TiDelete } from 'react-icons/ti'
-import { Price, Title } from './styles/Product.Styled';
+import { Price, Title } from '../styles/Product.Styled';
 
-const CartItem = ({ itemData, removeFromCart, adjustQty }) => {
+const CanjearCartItem = ({ itemData, removeFromCart, adjustQty }) => {
 
     const [input, setInput] = useState(itemData.qty)
 
@@ -26,7 +26,7 @@ const CartItem = ({ itemData, removeFromCart, adjustQty }) => {
                 />
                 <Detail>
                     <Title>{itemData.title}</Title>
-                    <Price>${itemData.price} </Price>
+                    <Price>${itemData.price.toLocaleString('es')} </Price>
                     <Cantidad>
                         <div>
                             +/-
@@ -58,4 +58,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(null, mapDispatchToProps)(CartItem)
+export default connect(null, mapDispatchToProps)(CanjearCartItem)

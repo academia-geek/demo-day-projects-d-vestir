@@ -21,6 +21,10 @@ export const Nav = styled.nav`
   }
 
 `
+export const Nav2 = styled(Nav)`
+justify-content: left;
+background: ${({theme}) => theme.paleta.green1};
+`
 
 export const Counter = styled.div`
   display:flex;

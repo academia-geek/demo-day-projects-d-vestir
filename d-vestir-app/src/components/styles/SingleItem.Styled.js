@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const DivDetail = styled.div`
   display: flex;
   width: 800px;
-  margin: 2rem auto;
+  margin: 4rem auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   padding:2rem 2rem;
   align-items:center;
