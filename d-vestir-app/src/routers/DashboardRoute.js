@@ -31,7 +31,7 @@ const DashboardRoute = ({ currentItem, currentItem_canjear }) => {
         <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
         {!currentItem ? (
-          <Route path="/products" element={<Navigate to='/products' />} />
+          <Route path="/products" element={<Navigate to="/products" />} />
         ) : (
           <Route path="/product/:id" element={<SingleItem />} />
         )}
@@ -45,9 +45,9 @@ const DashboardRoute = ({ currentItem, currentItem_canjear }) => {
         ) : (
           <Route path="/canjearProduct/:id" element={<CanjearSingleItem />} />
         )}
-        <Route path="/canjearCarItem" element={<CanjearCartItem/>}/>
+        <Route path="/canjearCarItem" element={<CanjearCartItem />} />
 
-        
+
 
         <Route path='/exitoso' element={<PagoExitoso />} />
         <Route path='/seguimiento' element={<Seguimiento />} />

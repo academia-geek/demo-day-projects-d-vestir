@@ -25,6 +25,10 @@ export const Nav2 = styled(Nav)`
 justify-content: left;
 background: ${({theme}) => theme.paleta.green1};
 `
+export const Nav3 = styled(Nav2)`
+// background: ${({theme}) => theme.paleta.yellow};
+
+`
 
 export const Counter = styled.div`
   display:flex;
@@ -43,7 +47,7 @@ export const DivCart = styled.div`
   border: 2px solid white;
   border-radius: 2px;
   align-items: center;
-  padding: 0.3rem 1rem;
+  padding: 0.1rem 1rem;
   text-decoration:none;
   color:white;
 `

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import CanjearCartItem from './CanjearCartItem'
-import { CartDiv, Content, Item, Price, Button } from '../styles/Cart.Styled';
+import { CartDiv, Content2, Item, Price, Button, Pagar } from '../styles/Cart.Styled';
 import CanjearNavbar from './CanjearNavbar';
 import Swal from 'sweetalert2'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 const CanjearCart = ({ cart_canjear }) => {
@@ -30,11 +30,12 @@ const CanjearCart = ({ cart_canjear }) => {
 
     const showAlert = () => {
         Swal.fire({
-            title: "Canje exitoso",
-            text: "Gracias por su compra.",
+            title: "Canje en proceso, a la espera del vendedor.",
+            text: "Transación exitosa.",
             icon: "success",
             confirmButtonText: "OK",
         });
+        navigate('/canjearProducts')
     }
 
     return (
@@ -46,8 +47,18 @@ const CanjearCart = ({ cart_canjear }) => {
                         <CanjearCartItem key={item.id} itemData={item} />
                     ))}
                 </Item>
-                <Content>
-                    <h3>Orden de compra</h3>
+                <Content2>
+                    <Pagar>
+                        <h3>Orden de compra</h3>
+
+                        <h5>¿Quieres comprar o canjear?</h5>
+                        <Link to='/cart'>
+                            <button>Comprar</button>
+                        </Link>
+                        <Link to='/canjearCart'>
+                            <button>Canjear</button>
+                        </Link>
+                    </Pagar>
                     <Price>
                         <p>Cantidad Unidades ({totalItems})</p>
                         <Price>Gastos de envío: $ 0.0</Price>
@@ -56,7 +67,7 @@ const CanjearCart = ({ cart_canjear }) => {
                     <Button onClick={showAlert}>
                         Canjear ${totalItems} Unidades.
                     </Button>
-                </Content>
+                </Content2>
 
             </CartDiv>
         </>

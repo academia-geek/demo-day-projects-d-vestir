@@ -45,7 +45,7 @@ const initialState = {
     {
       id: 5,
       title: "Blazer gris.",
-      genero: 'Mujer',
+      genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
       price: 'Pantalón en drill',
@@ -54,18 +54,18 @@ const initialState = {
     },
     {
       id: 6,
-      title: "Vestido.",
-      genero: 'Mujer',
+      title: "Caqueta en Jean.",
+      genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
-      price: 'Botines negros',
+      price: 'Zapatillas',
       image:
-        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Canjear%2Fpexels-quang-anh-ha-nguyen-884979.jpg?alt=media&token=a2d4c081-dbb3-4ac9-860f-9917f85bce3f",
+        "https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Canjear%2Fpexels-sindre-str%C3%B8m-1040945.jpg?alt=media&token=3fb051d7-5064-40d2-87f1-ab43e11f9bff",
     },
     {
       id: 7,
       title: "Cazadora amarilla.",
-      genero: 'Mujer',
+      genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
       price: 'Jean skinny',
@@ -75,7 +75,7 @@ const initialState = {
     {
       id: 8,
       title: "Camisa cuello de tortuga.",
-      genero: 'Mujer',
+      genero: 'Hombre',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae nostrum in. Voluptatum quidem expeditaullam odio quis laborum corrupti.Accusantium inventore possimus ab saepe deserunt in quia alias necessitatibus consectetur delectus, nobis impedit enim sapiente exercitationem ratione tempore harum.",
       price: 'Camisa café.',

@@ -26,7 +26,7 @@ const CartItem = ({ itemData, removeFromCart, adjustQty }) => {
                 />
                 <Detail>
                     <Title>{itemData.title}</Title>
-                    <Price>${itemData.price} </Price>
+                    <Price>${itemData.price.toLocaleString('es-CO')} </Price>
                     <Cantidad>
                         <div>
                             +/-

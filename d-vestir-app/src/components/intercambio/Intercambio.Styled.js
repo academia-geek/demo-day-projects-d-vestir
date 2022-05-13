@@ -29,3 +29,7 @@ export const Form = styled.form`
         }
     }
 `
+export const ButtonQR = styled.button`
+    background:none;
+    color:black;
+`

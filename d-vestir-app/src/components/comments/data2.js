@@ -17,7 +17,7 @@ export const data2 = [
     {
         id: 3,
         title: 'Mónica',
-        description: 'El proceso de donación me pareció seguro, ordenado ya que fue por medio de una cita previa. Me gustó que le hacen seguimiento de principio a fin. Volvería a hacer uso de ésta página.',
+        description: 'El proceso de canje me pareció seguro, ordenado ya que fue por medio de la página. Me gustó que le hacen seguimiento de principio a fin. Volvería a hacer uso de ésta página.',
         occupation: 'Empleado.',
         image: 'https://firebasestorage.googleapis.com/v0/b/ropa-app-bb1da.appspot.com/o/Profile%2Fpexels-lucas-pezeta-1878522.jpg?alt=media&token=96aad935-1317-4d46-b5ac-1a383ff70d2e',
 

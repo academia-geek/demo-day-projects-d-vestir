@@ -12,7 +12,7 @@ export const Item = styled.div`
   margin-right: 1rem;
 `
 export const Content = styled.div`
-  height: 350px;
+  height: 400px;
   flex: 0.3;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,12 @@ export const Content = styled.div`
   background-color:white;
 
 `
+export const Content2 = styled(Content)`
+   p{
+     padding-top:7rem;
+   }
+`
+
 export const Price = styled.div`
   // flex: 0.4;
   font-size: 1.2rem;
@@ -37,10 +43,25 @@ export const Price = styled.div`
 export const Button = styled.button`
   padding: 10px;
   border-radius: 5px;
-  background: ${({theme}) => theme.success.background};
-  color: ${({theme}) => theme.success.color};
+  background: ${({ theme }) => theme.success.background};
+  color: ${({ theme }) => theme.success.color};
   font-size: 1.2rem;
   font-weight: bold;
   width:340px;
 `
+export const Pagar = styled.div`
+  align-items:center;
+  text-align:center;
 
+  h3{
+    margin-bottom:2rem;
+  }
+
+  button {
+    padding:5px;
+    gap:10px;
+    margin-bottom:2rem;
+    margin:0 5px;
+    border-radius:5px;
+  }
+`
