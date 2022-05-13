@@ -59,7 +59,7 @@ const CanjearProduct = ({ productData, addToCart, loadCurrentItem }) => {
                         <QRCode
                             id='qrCode'
                             size={300}
-                            value={`Canje: Producto:${productData.title}, Genero:${productData.genero}, Precio:${productData.price}`}
+                            value={`Canje: ${productData.image} Producto:${productData.title}, Genero:${productData.genero}, Precio:${productData.price}`}
                             bgColor='white'
                             fgColor='#313552'
                             level='Q'

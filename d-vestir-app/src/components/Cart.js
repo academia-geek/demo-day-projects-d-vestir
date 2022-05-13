@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import CartItem from './CartItem'
 import { CartDiv, Content, Item, Price, Button, Pagar } from './styles/Cart.Styled';
 
-import StripeCheckout from 'react-stripe-checkout';
+// import StripeCheckout from 'react-stripe-checkout';
 import { Link, useNavigate } from 'react-router-dom';
 // import axios from 'axios';
 
-const KEY = 'pk_test_51KrtoMKKdkF9eoZNO1eQg5oKbgVJhozTacAMoLiI8WPbjQJi0hMmLkDMzOcpMZbjfEiqBs4usBLInv320vnh6e7J00keZdl9PF';
+// const KEY = 'pk_test_51KrtoMKKdkF9eoZNO1eQg5oKbgVJhozTacAMoLiI8WPbjQJi0hMmLkDMzOcpMZbjfEiqBs4usBLInv320vnh6e7J00keZdl9PF';
 
 const Cart = ({ cart }) => {
 
@@ -81,7 +81,7 @@ const Cart = ({ cart }) => {
                     <Price>Total a pagar: ${totalPrice.toLocaleString('es-CO')}</Price>
                 </Price>
 
-                <StripeCheckout
+                {/* <StripeCheckout
                     name='VESTIR'
                     // image='/images/logo1.png'
                     billingAddress
@@ -95,11 +95,11 @@ const Cart = ({ cart }) => {
                     allowRememberMe
                     closed={() => navigate('/exitoso')}
                 // email='contacto@dvestir.com'
-                >
-                    <Button>
+                > */}
+                    <Button onClick={() => navigate('/exitoso')}>
                         Comprar ${totalPrice.toLocaleString('es-CO')}
                     </Button>
-                </StripeCheckout>
+                {/* </StripeCheckout> */}
             </Content>
         </CartDiv>
     )
