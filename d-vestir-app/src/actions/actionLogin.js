@@ -1,6 +1,7 @@
 import { getAuth, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import { google, facebook } from '../firebase/firebaseConfig';
 import { types } from "../types/types";
+import Swal from 'sweetalert2';
 
 // Logout
 export const logout = () => {
@@ -9,6 +10,11 @@ export const logout = () => {
         signOut(auth)
         .then(res => {
             dispatch(logoutSincrono())
+
+            Swal.fire({
+                title:'¡Sesión finalizada!',
+                text:'Te estaremos esperando.',
+            })
         })
         .catch(error => {
             console.log(error)
@@ -29,7 +35,10 @@ export const loginFacebook = () => {
         signInWithPopup(auth, facebook)
             .then(({ user }) => {
                 dispatch(loginSincrono(user.uid, user.displayName))
-                console.log('exitoso')
+
+                Swal.fire({
+                    title: 'Inicio Exitoso',
+                })
             })
             .catch(error => {
                 console.log(error)
@@ -47,11 +56,19 @@ export const loginEmailPassword = (email, password) => {
             .then((user) => {
                 console.log(user);
                 dispatch(loginSincrono(user.uid, user.displayName))
-                console.log('Bienvenidos');
+
+                Swal.fire({
+                    title:'¡Bienvenido!',
+                })
+
             })
             .catch(error => {
                 console.log(error);
-                console.log('El usuario no exite');
+
+                Swal.fire({
+                    title:'¡El usuario no exite!',
+                    text:'Intente nuevamente o regístrese',
+                })
 
             })
     }
@@ -64,9 +81,18 @@ export const loginGoogle = () => {
         signInWithPopup(auth, google)
             .then(({ user }) => {
                 dispatch(loginSincrono(user.uid, user.displayName))
+
+                Swal.fire({
+                    title:'¡Bienvenido!',
+                })
             })
             .catch(error => {
                 console.log(error);
+
+                Swal.fire({
+                    title:'¡El usuario no exite!',
+                    text:'Intente nuevamente o regístrese',
+                })
             })
     }
 }

@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { Fireworks } from './Confetti'
 import { BsFillCheckCircleFill } from 'react-icons/bs'
 import { StyledPago, DivSuccess } from './Pagos.Styled';
 
 const PagoExitoso = () => {
+
+  useEffect(() => {
+    localStorage.clear();
+    Fireworks();
+  }, []);
+
   return (
     <StyledPago>
-      <Fireworks />
       <DivSuccess>
         <i>
           <BsFillCheckCircleFill size={'3em'} />

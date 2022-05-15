@@ -2,6 +2,7 @@ import './App.css';
 import '@stripe/stripe-js'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 import { GlobalStyles, theme } from './components/styles/Global';
 import Routers from './routers/Routers'

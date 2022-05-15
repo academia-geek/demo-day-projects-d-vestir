@@ -27,7 +27,6 @@ const Navbar = ({ cart }) => {
 
     const handleLogout = () => {
         dispatch(logout())
-
         navigate('/login')
     }
 

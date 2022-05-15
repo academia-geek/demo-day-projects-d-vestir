@@ -21,7 +21,7 @@ export const ProductDiv = styled.div`
 
 
     img {
-        width: 250px;
+        width:250px;
         height:250px;
         object-fit: contain;
         border-radius: 10px;

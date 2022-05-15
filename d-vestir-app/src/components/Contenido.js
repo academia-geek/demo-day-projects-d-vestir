@@ -7,6 +7,7 @@ import { ListUsers } from './ListUsers';
 
 import { DivForm } from './styles/Contenido.Styled';
 import { Form } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const Contenido = () => {
 
@@ -29,6 +30,11 @@ const Contenido = () => {
     e.preventDefault();
     dispatch(userAddAsincrono(cedula, nombres, username, tarjeta, celular, direccion, email, imagen));
     reset();
+
+    Swal.fire({
+      title:'¡Perfil actualizado!'
+    })
+
   }
 
   const handleFile = (e) => {

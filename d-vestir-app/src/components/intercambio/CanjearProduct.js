@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
+import confetti from 'canvas-confetti';
 import { addToCart, loadCurrentItem } from '../../actions/actionCanjear'
 
 import { ProductDiv, Details, Title, Description, Price, Add, Options } from '../styles/Product.Styled';
@@ -37,10 +38,12 @@ const CanjearProduct = ({ productData, addToCart, loadCurrentItem }) => {
                         <Price> ${productData.price}</Price>
                     </Details>
 
-
-
                     <Options>
-                        <Add onClick={() => addToCart(productData.id)
+                        <Add onClick={() => addToCart(productData.id, confetti({
+                            particleCount: 100,
+                            startVelocity: 30,
+                            spread: 360
+                        }))
                         }
                         >
                             Canjear
@@ -64,7 +67,7 @@ const CanjearProduct = ({ productData, addToCart, loadCurrentItem }) => {
                             fgColor='#313552'
                             level='Q'
                             imageSettings={{
-                                src: '/images/favicon3.png',
+                                src: '/images/favicon-16x16.png',
                                 excavate: true,
                                 width: 300 * 0.1,
                                 height: 300 * 0.1,

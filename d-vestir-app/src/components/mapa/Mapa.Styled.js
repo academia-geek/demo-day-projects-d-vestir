@@ -37,7 +37,34 @@ export const StyledMap = styled.div`
     padding:2rem 5rem;
     padding-bottom: 5rem;
     display:flex;
-    align-items:center;
+    align-items:flex-start;
     justify-content:center;
     margin:0 auto;
+
+    width: 100%;
+    aspect-ratio: 800 / 500;
+`
+export const Stores = styled.div`
+ align-items:left;
+ text-align:left;
+
+ h2 {
+     margin-bottom:2rem;
+ }
+ 
+ p {
+    max-width:1600px;
+    width:400px;
+ }
+
+ button {
+    padding:5px;
+    margin-bottom:2rem;
+    border-radius:5px;
+    margin-right:2rem;
+  }
+
+`
+export const DivContainer = styled.div`
+ 
 `

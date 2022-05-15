@@ -4,6 +4,7 @@ import { addProduct, listProduct, deleteProduct } from '../actions/actionSell'
 import { useForm } from '../hooks/useForm';
 import { fileUpload } from '../helpers/FileUpload'
 import { ButtonDele } from './styles/ListUser.Styled';
+import Swal from 'sweetalert2';
 
 const Vender = () => {
 
@@ -25,6 +26,11 @@ const Vender = () => {
     e.preventDefault();
     dispatch(addProduct(producto, talla, precio, imagen, descripcion, codigo))
     reset();
+
+    Swal.fire({
+      title:'¡Producto publicado con exito!'
+    })
+
   }
 
   const handleFile = (e) => {

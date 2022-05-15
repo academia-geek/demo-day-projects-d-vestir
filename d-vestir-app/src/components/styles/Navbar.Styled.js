@@ -43,9 +43,8 @@ export const Counter = styled.div`
 export const DivCart = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-rigth: 1rem;
-  border: 2px solid white;
   border-radius: 2px;
+  border:2px solid white;
   align-items: center;
   padding: 0.1rem 1rem;
   text-decoration:none;

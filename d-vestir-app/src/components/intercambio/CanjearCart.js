@@ -5,6 +5,7 @@ import { CartDiv, Content2, Item, Price, Button, Pagar } from '../styles/Cart.St
 import CanjearNavbar from './CanjearNavbar';
 import Swal from 'sweetalert2'
 import { useNavigate, Link } from 'react-router-dom';
+import { Fireworks } from '../pagos/Confetti'
 
 
 const CanjearCart = ({ cart_canjear }) => {
@@ -36,6 +37,9 @@ const CanjearCart = ({ cart_canjear }) => {
             confirmButtonText: "OK",
         });
         navigate('/canjearProducts')
+        setTotalItems()
+        Fireworks();
+        
     }
 
     return (

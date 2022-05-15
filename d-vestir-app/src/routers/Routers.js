@@ -13,7 +13,7 @@ import LandingPage from "../components/landing/LandingPage";
 import Footer from '../components/Footer';
 import Loading from "../components/loading/Loading";
 
-function AppRouter() {
+function Routers() {
 
   const [checking, setChecking] = useState(true)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -60,9 +60,10 @@ function AppRouter() {
 
         } />
 
-        <Route path="/*" element={<PrivateRouters isAut={isLoggedIn}>
-          <DashboardRoute />
-        </PrivateRouters>} />
+        <Route path="/*" element={
+          <PrivateRouters isAut={isLoggedIn}>
+            <DashboardRoute />
+          </PrivateRouters>} />
 
 
       </Routes>
@@ -73,4 +74,4 @@ function AppRouter() {
 
 
 
-export default AppRouter
+export default Routers

@@ -1,70 +1,115 @@
-import React from 'react'
-import Map, { Marker, Popup, NavigationControl, FullscreenControl, GeolocateControl } from 'react-map-gl'
-import { DivMap, Logo, Ptag, Title, StyledMap } from './Mapa.Styled'
+import React, { useState, useEffect } from 'react'
+import * as ReactLeaflet from 'react-leaflet'
+import 'leaflet/dist/leaflet.css';
+import { storeLocation } from './Stores'
+import { FaExternalLinkAlt } from 'react-icons/fa'
+import { DivMap, Logo, Title, StyledMap, Stores } from './Mapa.Styled'
 
-const MAP_KEY = 'pk.eyJ1IjoiYW5kcmVzbHYiLCJhIjoiY2wyajcwd3dnMDFibTNqbWs4NGtoOHI2dSJ9.qhpE3jLPqJyCTFIxHgCZGA'
+import L from 'leaflet'
+import iconMarker2x from 'leaflet/dist/images/marker-icon-2x.png'
+import iconMarker from 'leaflet/dist/images/marker-icon.png'
+import iconMarkerShadow from 'leaflet/dist/images/marker-shadow.png'
+
+import center from '@turf/center'
+import { points } from '@turf/helpers'
+const { MapContainer, useMap, TileLayer, Marker, Popup } = ReactLeaflet;
+
+const features = points(storeLocation.map(({ location }) => {
+  return [location.latitude, location.longitude]
+}));
+
+const [defaultLatitude, defaultLongitude] = center(features)?.geometry.coordinates;
 
 const Mapa = () => {
+
+  const [activeStore, setActiveStore] = useState();
+  console.log('activeStore', activeStore);
+
+  useEffect(() => {
+    delete L.Icon.Default.prototype._getIconUrl
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl: iconMarker2x,
+      iconUrl: iconMarker,
+      shadowUrl: iconMarkerShadow,
+    }) 
+  }, []) 
+
+  
+  const MapEffect = () => {
+    const map = useMap() 
+    // console.log(map)
+
+    useEffect(() => {
+
+      if (!activeStore) return;
+      const { location } = storeLocation.find(({ id }) => id === activeStore)
+      map.setView([location.latitude, location.longitude], 14)
+
+      // eslint-disable-next-line
+    }, [activeStore]) 
+    return null;
+  }
+
 
   return (
     <>
       <StyledMap>
-        <Map
-          initialViewState={{
-            longitude: -74.16996,
-            latitude: 4.590509,
-            zoom: 12,
-            pitch: 50,
-            unit: 'metric',
-            profile: 'mapbox/driving',
-            alternatives: false,
-            geometries: 'geojson',
-            controls: { instructions: false },
-            flyTo: false
-          }}
 
-          mapStyle='mapbox://styles/andreslv/cl2j5p4hy003m14mt98xj590d'
-          mapboxAccessToken={MAP_KEY}
-          style={{ width: 700, height: 500 }}
-          userLocation={true}
-        >
-          <Marker
-            longitude={-74.169}
-            latitude={4.590}
-          >
-            <div >
-              <Logo src='/images/logo2.png' />
-              <Ptag>📌</Ptag>
-            </div>
-          </Marker>
+        <Stores>
+          <ul>
+            <h2>Tiendas</h2>
+            {storeLocation.map(location => {
 
-          <Popup
-            role='img'
-            longitude={-74.169}
-            latitude={4.590}
-            offset={25}
-            closeButton={true}
-            closeOnClick={true}
-            openOnClick={true}
-          >
-            <DivMap>
-              <Logo src='/images/logo1.png' />
-              <Title>Aquí está ubicada nuestra tienda física.</Title>
-              <p>Cll 56 a N 80 Oeste.</p>
-              <p>Teléfono: 555 555 555</p>
-            </DivMap>
-          </Popup>
+              function handleOnClick() {
+                setActiveStore(location.id)
+              }
+              return (
 
-          <FullscreenControl />
-          <NavigationControl search={true}
-          />
-          <GeolocateControl
-            positionOptions={{
-              enableHighAccuracy: true,
-            }}
-            trackUserLocation={true}
-          />
-        </Map>
+                <li key={location.id}>
+                  <Title>{location.name}</Title>
+                  <p>{location.address}</p>
+                  <p>{location.phone}</p>
+                  <button onClick={handleOnClick}>
+                    Ver en el mapa
+                  </button>
+                  <a href={`https://www.google.es/maps/dir//${location.location.latitude},${location.location.longitude}/@${location.location.latitude},${location.location.longitude},12z/`} target='_blank' rel="noreferrer" >
+                    Calcular distancia -
+                    <FaExternalLinkAlt />
+                  </a>
+                  <hr />
+                </li>
+              )
+            }
+            )}
+          </ul>
+        </Stores>
+
+
+        <MapContainer center={[defaultLatitude, defaultLongitude]} zoom={4} scrollWheelZoom={false} style={{ width: '100%', height: '100%' }}>
+          <>
+            <MapEffect />
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {storeLocation.map(location => {
+              const { latitude, longitude } = location.location;
+              return (
+
+                <Marker position={[latitude, longitude]} key={location.id}>
+                  <Popup>
+                    <DivMap>
+                      <Logo src='/images/logo1.png' />
+                      <Title>{location.name}</Title>
+                      <p>{location.address}</p>
+                      <p>{location.phone}</p>
+                    </DivMap>
+                  </Popup>
+                </Marker>
+              )
+            })}
+          </>
+        </MapContainer>
       </StyledMap>
     </>
   )

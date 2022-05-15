@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
+import confetti from 'canvas-confetti';
 import { addToCart, loadCurrentItem } from '../actions/shoppingActions';
 
 import { ProductDiv, Details, Title, Description, Price, Add, Options, Original } from './styles/Product.Styled';
@@ -29,7 +30,12 @@ const Product = ({ productData, addToCart, loadCurrentItem }) => {
                     </Details>
 
                     <Options>
-                        <Add onClick={() => addToCart(productData.id)
+                        <Add onClick={() => addToCart(productData.id,
+                            confetti({
+                                particleCount: 100,
+                                startVelocity: 30,
+                                spread: 360
+                            }))
                         }
                         >
                             Añadir
